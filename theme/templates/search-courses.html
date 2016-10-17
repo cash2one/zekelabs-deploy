@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+{% load comment_tags %}
+{% load rating_tags %}
+{% block content %}
+
+
+<div class="container">
+{% include "searchbar.html"  %}
+{% for course in courses %}
+<div class="well well-sm">
+<div class="row">
+<div class="col-md-3">
+<div class="thumbnail">
+<img class="img-responsive" src="/static/media/{{ course.small_image }}" alt="" >
+<div class="caption">
+<h3>{{course.title}}</h3>
+</div>
+</div>
+</div>
+<div class="col-md-7">{{ course.overview  }}</div>
+<div class="col-md-2">Enroll Info</div>
+</div>
+</div>
+{% endfor %}
+</div>
+{% endblock %}

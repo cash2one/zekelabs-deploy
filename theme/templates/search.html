@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+{% load comment_tags %}
+{% load rating_tags %}
+{% block content %}
+
+{% include "subjects.html" %}
+
+<div class="container">
+{% for blog in blogs %}
+
+{% url 'blog' blog.slug as the_url %}
+{{the_url}}
+<div class="well well-sm">
+<a href="{{ the_url }}"><h4>{{ blog.title | safe  }}</h4></a>
+{{blog.created}}
+
+</div>
+
+{% endfor %}
+</div>
+
+{% endblock %}

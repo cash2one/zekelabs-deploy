@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load static %}
+{% load comment_tags %}
+{% load rating_tags %}
+{% block content %}
+<div class="container">
+{% include "searchbar.html" %}
+<h1>{{ blog.title | safe  }}</h1>
+{{ blog.content | safe  }}
+
+<hr>
+<h5>There are {{ blog.comments_count }} comment{{ blog.comments_count|pluralize }}</h3>
+{% comments_for blog %}
+</div>
+{% endblock %}

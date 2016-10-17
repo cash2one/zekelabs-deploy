@@ -1,0 +1,41 @@
+/************************************************* css for footers****************************************/
+/**footet dark**/
+#footer {
+  background: #111;
+  font-size: 0.9em;
+  padding: 80px 0 0;
+  position: relative;
+  clear: both;
+}
+
+.footer-col h3 {
+  color: #fff;
+  margin-bottom: 30px;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.footer-col h3:first-letter {
+  border-bottom: 1px solid #bbb;
+}
+
+.footer-col p {
+  color: #aeaeae;
+}
+
+
+
+@media (max-width: 767px) {
+  .news-form {
+    text-align: center !important;
+  }
+
+  .news-form .form-control {
+    margin-bottom: 10px;
+  }
+}
+.footer-social li {
+  padding: 0px;
+}

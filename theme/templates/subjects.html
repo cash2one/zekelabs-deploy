@@ -1,0 +1,42 @@
+<style>
+.search {
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 14px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('/static/img/searchicon.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+}
+</style>
+
+<div class="container">
+<h3 ><center>
+<a href="{% url "search" "python" %}"><span class="label label-default">Python</span></a>
+<a href="{% url "search" "java" %}"><span class="label label-primary">Java</span></a>
+<a href="{% url "search" "scala" %}"><span class="label label-success">Scala</span></a>
+<a href="{% url "search" "spark" %}"><span class="label label-info">Spark</span></a>
+<a href="{% url "search" "hadoop" %}"><span class="label label-warning">Handoop</span></a>
+<a href="{% url "search" "android" %}"><span class="label label-danger">Android</span></a>
+</center></h3>
+{% if not blogs %}
+<br><br>
+<br><br>
+<br><br>
+{% endif %}
+<div style="background-color:lightgrey; " class="text-center">
+<hr>
+<form action="{% url "search"%}" method="get">
+<input class="search" style="width:70%" type="text" name="item" placeholder="Search..">
+</form>
+<hr>
+</div>
+{% if not blogs %}
+<br><br>
+<br><br>
+<br><br>
+{% endif %}
+</div>
+

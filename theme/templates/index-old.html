@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+{% load bootstrap3 %}
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://use.fontawesome.com/69938aa5d3.js"></script>
+
+     
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <style>
+        .carousel-inner > .item > img,
+        .carousel-inner > .item > a > img {
+            width: 30%;
+            margin: auto;
+
+        }
+
+        section
+{
+  background:white;
+}
+.banner
+{
+  background:red;
+  min-height:200px;
+}
+.banner .row
+{
+  text-align:center;
+  margin-top:50px;
+}
+.banner h1
+{
+  color:green;
+}
+
+
+
+/***********************************************************************
+*  OPAQUE NAVBAR SECTION
+***********************************************************************/
+.opaque-navbar {
+    background-color: white; 
+  /* Transparent = rgba(0,0,0,0) / Translucent = (0,0,0,0.5)  */
+    height: 60px;
+    /* transition: background-color .5s ease 0s;*/
+}
+
+
+ul.dropdown-menu {
+    background-color: black;
+}
+
+
+@media (max-width: 992px) {
+  body
+  {
+    background:red;
+    background-color:blue;
+  }
+  .opaque-navbar {
+    background-color: black;
+    height: 60px;
+    transition: background-color .5s ease 0s;
+}
+
+}
+
+
+
+
+        </style>
+
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>ZekeLabs</title>
+
+        <!-- Bootstrap -->
+       <!--  <link href="static/css/bootstrap.min.css" rel="stylesheet"> -->
+        <link href="static/css/animate.css" rel="stylesheet">
+        <link href="static/css/font-awesome.min.css" rel="stylesheet">
+        <link href="static/css/owl.carousel.css" rel="stylesheet">
+        <link href="static/css/owl.theme.css" rel="stylesheet">
+        <link href="static/css/owl.transitions.css" rel="stylesheet">
+        <link href="static/css/flexslider.css" rel="stylesheet">
+        <!--Revolution slider css-->
+        <link href="static/css/settings.css" rel="stylesheet" type="text/css" media="screen">
+        <link href="static/css/style.css" rel="stylesheet">
+        <link href="http://bootstraplovers.com/templates/assan-v2.5/landing-page/et-line-icons/style.css" rel="stylesheet">
+        <link href="http://bootstraplovers.com/templates/assan-v2.5/landing-page/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+
+        <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/56fe295116bd29f3183899f6/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
+        
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body style="background-color:#FFFFFF">
+   
+<!--
+********************************************************************
+* Responsive Transparent Navbar
+********************************************************************
+-->
+<div class="navbar navbar-fixed-top opaque-navbar">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navMain">
+  <span class="glyphicon glyphicon-chevron-right" style="color:white;"></span>
+    
+  </button>
+      <a class="navbar-brand" href="#">ZekeLabs</a>
+    </div>
+    <div class="collapse navbar-collapse" id="navMain">
+      <ul class="nav navbar-nav pull-right">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Services and Pricing</a></li> 
+        <li><a href="#">Contact Us</a></li> 
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+<!--
+     <div class="top-bar ">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                    <a class="navbar-brand" class="shrink-logo" href="home"><img src="static/img/001.jpg" class="img-circle" width="54" height="50" alt="ZekeLabs"></a> 
+                    </div>
+                    <div class="col-sm-6 hidden-xs">
+                        <span><i class="fa fa-phone"></i>+91 7838927671</span>
+                        <span><i class="fa fa-envelope"></i> info@zekelabs.com</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+-->
+        <!-- Static navbar  -->
+       <!--  <nav class="navbar navbar-inverse navbar-static-top yamm" >
+            <div class="container">
+                <div class="navbar-header" style="color:transparent;">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" class="shrink-logo" href="home"><img src="static/img/001.jpg" class="img-circle" width="54" height="50" alt="ZekeLabs"></a> 
+                </div>
+                
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+              
+                        <li><a class="page-scroll" href="#courses">Courses</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle js-activated" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="staff.html">Our Staff</a></li>
+                                <li><a href="gallery.html">Gallery</a></li>
+                                <li><a href="faq.html">F.A.Q</a></li>
+                                <li><a href="login.html">Login</a></li>
+                                <li><a class="page-scroll" href="#register">Register</a></li>
+                                <li><a href="events.html">Events</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="blogs">Blog</a></li>
+                       
+
+                    </ul>
+
+                </div>
+            </div>
+        </nav> -->
+        <!--rev slider start-->
+
+        <div class="fullwidthbanner">
+            <div class="tp-banner">
+                <ul>
+                    
+
+                    <li data-transition="fade" data-slotamount="5" data-masterspeed="1000" data-title="Solid team">
+                        <!-- MAIN IMAGE -->
+                        <img src="static/img/background1.jpg"  alt="darkblurbg"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">  
+                        <!-- <img src="static/img/office-620822.jpg"  alt="darkblurbg"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat"> --> 
+
+
+
+                      <!--   <div class="caption slider-title light sft"
+                             data-x="50"
+                             data-y="160"
+                             data-speed="1000"
+                             data-start="1000"
+                             data-easing="easeOutExpo">
+                            Create Everything<br>
+                            <span class="colored-text">Easily with Zekelabs</span>
+                        </div>
+ -->
+
+
+                        <div class="caption slider-caption light sfl"
+                             data-x="50"
+                             data-y="310"
+                             data-speed="1000"
+                             data-start="1800"
+                             data-easing="easeOutExpo">
+                              <br>
+                             
+                        </div>
+                        <div class="caption sfb rev-buttons tp-resizeme"
+                             data-x="center"
+                             data-y="500"
+                             data-speed="500"
+                             data-start="1800"
+                             data-easing="Sine.easeOut">
+                            <!-- <a href="#" class="btn btn-skin btn-lg">Query Now <i class="fa fa-edit"></i></a> -->
+                             <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Query Now</button>
+                        </div>
+                    <!-- </li> -->
+                    <!-- SLIDE -->
+                    <!-- <li data-transition="fade" data-slotamount="5" data-masterspeed="1000" data-title="Quality Services"> -->
+                        <!-- MAIN IMAGE -->
+                        <!-- <img src="http://bootstraplovers.com/templates/assan-v2.4/assan-education/images/bg-7.jpg"  alt="darkblurbg"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat"> -->
+
+<!-- 
+                        <div class="caption slider-title dark sft"
+                             data-x="50"
+                             data-y="200"
+                             data-speed="1000"
+                             data-start="1000"
+                             data-easing="easeOutExpo">
+                            Zekelabs <span class="colored-text">A trusted Brand</span>
+
+                        </div> -->
+
+
+<!-- 
+                        <div class="caption slider-caption dark sfl"
+                             data-x="50"
+                             data-y="290"
+                             data-speed="1000"
+                             data-start="1800"
+                             data-easing="easeOutExpo">
+                              <br>
+                              
+                        </div> -->
+               <!--          <div class="caption sfb rev-buttons tp-resizeme"
+                             data-x="50"
+                             data-y="360"
+                             data-speed="500"
+                             data-start="1800"
+                             data-easing="Sine.easeOut">
+                            <!-- <a href="#" class="btn btn-skin btn-lg">View Services <i class="fa fa-cogs"></i></a> -->
+                             <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Query Now</button> -->
+                        <!-- </div>  -->
+
+                    <!-- </li> -->
+                </ul>
+            </div>
+        </div><!--full width banner-->
+        <!--revolution end-->
+
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content" >
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title" align="center">Query Now</h4>
+                    </div>
+                    <div class="modal-body">
+                      
+                        <!-- <li class="col-md-4 shaded-bg">                                                     -->
+                        <form action="/register/" method="post" class="form" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <div class="form-group" >
+                                <input type="text" name="name" class="form-control" placeholder="Your Name">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="email" class="form-control" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="mobile" class="form-control" placeholder="Mobile">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="subject" class="form-control" placeholder="Subject">
+                            </div>
+                             <div class="form-group">
+                                <textarea rows="8" cols="50" name="message" class="form-control" placeholder="Message">
+                                
+                                </textarea>
+                            </div>
+                            <div class="text-center">
+                                <!-- <button type="Submit" class="btn btn-skin btn-lg btn-block"></button> -->
+                                <button type="submit" class="btn btn-skin btn-lg btn-block">Query Now</button>
+                            </div>
+                            
+                           <!--  {% buttons %}
+                            <button type="submit" class="btn btn-primary">  
+                            {% bootstrap_icon "star" %} Submit Query
+                            </button>
+                            {% endbuttons %} -->
+                        </form>
+                        <!-- </li>                   -->
+                      
+                    </div>
+                    <div class="modal-footer">
+                    <!--     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <!--call to action-->
+        <!--end call to action-->
+        <div class="container ">
+            <div class="row">
+                <div class="center-heading margin-btm-50">
+                        <section id="courses">
+                        <h2>Corporate Section</h2>
+                        <span class="border-width"></span>
+                        <p>Our Trainers have expertise of delivering sessions & consulting to various MNCs. A few of them are here</p>
+                        </section>
+                    </div>
+                <div class="col-sm-2" style="background-color:transparent;" align="center">
+                   
+                    <a class="thumb" >
+                        <img src="static/img/Datagenic1.png" alt="" class="img-responsive"><br/><br/><br/>
+                    </a>
+                
+                </div>
+
+                <div class="col-sm-2" style="background-color:transparent;" align="center">
+                  
+                    <a class="thumb" >
+                        <img src="static/img/mphasis.png" alt="" class="img-responsive"><br/><br/><br/>
+                    </a>
+                </div>
+                <div class="col-sm-2" style="background-color:transparent;"align="center">
+                   
+                    <a class="thumb" >
+                        <img src="static/img/cts1.png" alt="" class="img-responsive"><br/><br/><br/>
+                    </a>
+                </div>
+                <div class="col-sm-2" style="background-color:transparent;" align="center">
+                    
+                    <a class="thumb" >
+                        <img src="static/img/mindtree.png" alt="" class="img-responsive"><br/><br/><br/>
+                    </a>
+                </div>
+                <div class="col-sm-2" style="background-color:transparent;" align="center">
+                 
+                    <a class="thumb" >
+                        <img src="static/img/cisco.png" alt="" class="img-responsive"><br/><br/><br/>
+                    </a>
+                </div>
+                <div class="col-sm-2" style="background-color:transparent;"align="center">
+                  
+                    <a class="thumb" >
+                        <img src="static/img/happy.png" alt="" class="img-responsive"><br/><br/><br/>
+                    </a>
+                </div>
+
+            </div><!--row-->
+        </div><!--container-->
+
+
+        <div class="space20"></div>       
+        <div class="container" >
+            <div class="row">
+                <div class="col-sm-6 col-sm-offset-3">
+                    <div class="center-heading margin-btm-50">
+                        <section id="courses">
+                        <h2>Trending Courses</h2>
+                        <span class="border-width"></span>
+                        <p></p>
+                        </section>
+                    </div>
+                </div>
+            </div><!--center title end-->
+
+            <section class="new-arrivals">
+            <div class="container" >
+                <h2 class="section-heading" align='center'>Specialized Courses</h2>
+                <!--owl carousel-->
+                <div class="row" >
+                    <div id="owl-slider" class="col-md-12">
+
+                        <div class="item">
+                            <div class="item_holder">
+                                <a href="#"><img src="static/img/Adv/hadoop.jpg" alt="" class="img-responsive" width='100' height='100'></a>
+                                <div class="title">
+                                   <!--  <h5>Sky-Blue <br>Short Skirt</h5> -->
+                                 <!--    <span class="price">$29.99</span> -->
+                                </div><br/>
+                                <a href="#"><img src="static/img/Adv/hive-logo.jpg" alt="" class="img-responsive"  width='100' height='100'></a>
+                                <div class="title">
+                                  <!--   <h5>Black <br>analog watch</h5> -->
+                              <!--       <span class="price">$45.99</span> -->
+                                </div>
+                            </div><!--item holder-->
+                        </div> <!--item loop-->
+                        <div class="item">
+                            <div class="item_holder">
+                                <a href="#"><img src="static/img/Adv/spark-logo.jpg" alt="" class="img-responsive"  width='100' height='100'></a>
+                                <div class="title">
+                                   <!--  <h5>Dark-Blue <br>Men's t-shirt</h5> --><!-- 
+                                    <span class="price">$19.99 <del>$25.99</del></span> -->
+                                </div><br/>
+                                <a href="#"><img src="static/img/Adv/pig.jpg" alt="" class="img-responsive"  width='100' height='100'></a>
+                                <div class="title">
+                                   <!--  <h5>Dark-Blue <br>Men's t-shirt</h5> -->
+                         <!--            <span class="price">$19.99 <del>$25.99</del></span> -->
+                                </div>
+                            </div><!--item holder-->
+                        </div> <!--item loop-->
+                        <div class="item">
+                            <div class="item_holder">
+                                <a href="#"><img src="static/img/Adv/aws-logo.jpg" alt="" class="img-responsive" width='100' height='100'></a>
+                                <div class="title">
+                               <!--      <h5>Black <br>Short Skirt</h5> -->
+                         <!--            <span class="price">$29.99</span> -->
+                                </div><br/>
+                                <a href="#"><img src="static/img/Adv/apache-hbase-logo.jpg" alt="" class="img-responsive"  width='100' height='100'></a>
+                                <div class="title">
+                               <!--      <h5>Black <br>Short Skirt</h5> -->
+                          <!--           <span class="price">$29.99</span> -->
+                                </div>
+                            </div><!--item holder-->
+                        </div> <!--item loop-->
+                        <div class="item">
+                            <div class="item_holder">
+                                <a href="#"><img src="static/img/Adv/django-logo.jpg" alt="" class="img-responsive"  width='100' height='100'></a>
+                                <div class="title">
+                            <!--         <h5>Black <br>analog watch</h5> -->
+                           <!--          <span class="price">$45.99</span> -->
+                                </div><br/>
+                                <a href="#"><img src="static/img/Adv/machine.jpg" alt="" class="img-responsive"  width='100' height='100'></a>
+                                <div class="title">
+                                <!--     <h5>Black <br>analog watch</h5> -->
+                        <!--             <span class="price">$45.99</span> -->
+                                </div>
+                            </div><!--item holder-->
+                        </div> <!--item loop-->
+                        <div class="item">
+                            <div class="item_holder">
+                                <a href="#"><img src="static/img/Adv/java8.jpg" alt="" class="img-responsive"  width='100' height='100'></a>
+                                <div class="title"><!-- 
+                                    <h5>Black & blue <br>Backpack</h5> -->
+                              <!--       <span class="price">$45.99</span> -->
+                                </div><br/>
+                                <a href="#"><img src="static/img/Adv/Android.jpg" alt="" class="img-responsive" width='100' height='100'></a>
+                                <div class="title">
+                          <!--           <h5>Black & blue <br>Backpack</h5> -->
+                           <!--          <span class="price">$45.99</span> -->
+                                </div>
+                            </div><!--item holder-->
+                        </div> <!--item loop-->
+                        <div class="item">
+                            <div class="item_holder">
+                                <a href="#"><img src="static/img/Adv/angular.jpg" alt="" class="img-responsive"  width='100' height='100'</a>
+                                <div class="title"><!-- 
+                                    <h5>Black & blue <br>Laptop bag</h5> -->
+                             <!--        <span class="price">$45.99</span> -->
+                                </div><br/>
+                                <a href="#"><img src="static/img/Adv/ansible.jpg" alt="" class="img-responsive"  width='100' height='100'></a>
+                                <div class="title">
+                                 <!--    <h5>Black & blue <br>Laptop bag</h5> -->
+                  <!--                   <span class="price">$45.99</span> -->
+                                </div>
+                            </div><!--item holder-->
+                        </div> <!--item loop-->
+                    </div><!--owl end-->
+                </div>
+            </section>
+
+            <section class="new-arrivals">
+            <div class="container" >
+                <h2 class="section-heading" align='center'>Foundation Courses</h2>
+                <!--owl carousel-->
+                <div class="row" >
+                    <div id="owl-slider1" class="col-md-12">
+
+                        <div class="item">
+                            <div class="item_holder">
+                                <a href="#"><img src="static/img/foundation/java.jpg" alt="" class="img-responsive" width='100' height='100'></a>
+                                <div class="title">
+                                   <!--  <h5>Sky-Blue <br>Short Skirt</h5> -->
+                                 <!--    <span class="price">$29.99</span> -->
+                                </div><br/>
+                                <a href="#"><img src="static/img/foundation/javascript.jpg" alt="" class="img-responsive" width='100' height='100'></a>
+                                <div class="title">
+                                  <!--   <h5>Black <br>analog watch</h5> -->
+                              <!--       <span class="price">$45.99</span> -->
+                                </div>
+                            </div><!--item holder-->
+                        </div> <!--item loop-->
+                        <div class="item">
+                            <div class="item_holder">
+                                <a href="#"><img src="static/img/foundation/python.jpg" alt="" class="img-responsive"  width='100' height='100'></a>
+                                <div class="title">
+                                   <!--  <h5>Dark-Blue <br>Men's t-shirt</h5> --><!-- 
+                                    <span class="price">$19.99 <del>$25.99</del></span> -->
+                                </div><br/>
+                                <a href="#"><img src="static/img/foundation/linux.jpg" alt="" class="img-responsive"  width='100' height='100'></a>
+                                <div class="title">
+                                   <!--  <h5>Dark-Blue <br>Men's t-shirt</h5> -->
+                         <!--            <span class="price">$19.99 <del>$25.99</del></span> -->
+                                </div>
+                            </div><!--item holder-->
+                        </div> <!--item loop-->
+                        <div class="item">
+                            <div class="item_holder">
+                                <a href="#"><img src="static/img/foundation/perl.jpg" alt="" class="img-responsive"  width='100' height='100'></a>
+                                <div class="title">
+                               <!--      <h5>Black <br>Short Skirt</h5> -->
+                         <!--            <span class="price">$29.99</span> -->
+                                </div><br/>
+                                <a href="#"><img src="static/img/foundation/java.jpg" alt="" class="img-responsive"  width='100' height='100'></a>
+                                <div class="title">
+                               <!--      <h5>Black <br>Short Skirt</h5> -->
+                          <!--           <span class="price">$29.99</span> -->
+                                </div>
+                            </div><!--item holder-->
+                        </div> <!--item loop-->
+                        <div class="item">
+                            <div class="item_holder">
+                                <a href="#"><img src="static/img/foundation/ruby.jpg" alt="" class="img-responsive" width='100' height='100'></a>
+                                <div class="title">
+                            <!--         <h5>Black <br>analog watch</h5> -->
+                           <!--          <span class="price">$45.99</span> -->
+                                </div><br/>
+                                <a href="#"><img src="static/img/foundation/java.jpg" alt="" class="img-responsive"  width='100' height='100'></a>
+                                <div class="title">
+                                <!--     <h5>Black <br>analog watch</h5> -->
+                        <!--             <span class="price">$45.99</span> -->
+                                </div>
+                            </div><!--item holder-->
+                        </div> <!--item loop-->
+                        <div class="item">
+                            <div class="item_holder">
+                                <a href="#"><img src="static/img/foundation/Oracle.jpg" alt="" class="img-responsive"  width='100' height='100'></a>
+                                <div class="title"><!-- 
+                                    <h5>Black & blue <br>Backpack</h5> -->
+                              <!--       <span class="price">$45.99</span> -->
+                                </div><br/>
+                                <a href="#"><img src="static/img/foundation/mysql.jpg" alt="" class="img-responsive"  width='100' height='100'></a>
+                                <div class="title">
+                          <!--           <h5>Black & blue <br>Backpack</h5> -->
+                           <!--          <span class="price">$45.99</span> -->
+                                </div>
+                            </div><!--item holder-->
+                        </div> <!--item loop-->
+                        <div class="item">
+                            <div class="item_holder">
+                                <a href="#"><img src="static/img/foundation/.jpg" alt="" class="img-responsive"  width='100' height='100'</a>
+                                <div class="title"><!-- 
+                                    <h5>Black & blue <br>Laptop bag</h5> -->
+                             <!--        <span class="price">$45.99</span> -->
+                                </div><br/>
+                                <a href="#"><img src="static/img/foundation/ansible.jpg" alt="" class="img-responsive"  width='100' height='100'></a>
+                                <div class="title">
+                                 <!--    <h5>Black & blue <br>Laptop bag</h5> -->
+                  <!--                   <span class="price">$45.99</span> -->
+                                </div>
+                            </div><!--item holder-->
+                        </div> <!--item loop-->
+                    </div><!--owl end-->
+                </div>
+            </section>
+
+        </div>   
+        </div> <!--courses slider container end-->
+
+        <div class="space-20"></div>
+        <section id="features">
+           <!--  <div class="container">
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2 center-title">
+                        <h2>Why choose us?</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum quas necessitatibus nesciunt temporibus, adipisci aliquid inventore et quaerat alias.</p>
+                    </div>
+                </div><!--center title row end--> -->
+
+                <div class="row" style="background-color: #eee;">
+                <div class="col-sm-6 col-sm-offset-3">
+                    <div class="center-heading margin-btm-50">
+                        <section id="courses">
+                        <h2>Trending Courses</h2>
+                        <span class="border-width"></span>
+                        <p>It is a long established fact that a reader will be distracted by the readable content</p>
+                        </section>
+                    </div>
+                </div>
+                </div>
+
+                <div class="row" style="background-color: #eee;">
+                    <div class="col-sm-4">
+                        <div class="feature-box wow animated fadeInDown" data-wow-delay="0.1s">  
+                            <!-- <i class="icon-mobile"></i> -->
+                            <i class="fa fa-bullseye" aria-hidden="true"></i>
+                            <h3>Mobile friendly</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum quas necessitatibus nesciunt temporibus.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="feature-box wow animated fadeInDown" data-wow-delay="0.2s">
+                        <!--     <i class="icon-chat red"></i> -->
+                        <i class="fa fa-clock-o" aria-hidden="true"></i>
+
+                            <h3>24/7 support</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum quas necessitatibus nesciunt temporibus.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="feature-box wow animated fadeInDown" data-wow-delay="0.3s">
+                            <!-- <i class="icon-layers green"></i> -->
+                            <i class="fa fa-desktop" aria-hidden="true"></i>
+                            <h3>SASS preprocessors </h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum quas necessitatibus nesciunt temporibus.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="background-color: #eee;">
+                    <div class="col-sm-4">
+                        <div class="feature-box wow animated fadeInDown" data-wow-delay="0.4s">
+                            <!-- <i class="icon-pencil blue"></i> -->
+                            <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                            <h3>Easy to use</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum quas necessitatibus nesciunt temporibus.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="feature-box wow animated fadeInDown" data-wow-delay="0.5s">
+                            <!-- <i class="icon-gears yellow"></i> -->
+                            <i class="fa fa-code" aria-hidden="true"></i>
+                            <h3>Free updates</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum quas necessitatibus nesciunt temporibus.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="feature-box wow animated fadeInDown" data-wow-delay="0.6s">
+                            <!-- <i class="icon-browser gold"></i> -->
+                            <i class="fa fa-github" aria-hidden="true"></i>
+                            <h3>Cross Browser</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum quas necessitatibus nesciunt temporibus.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- #f5f5f -->
+        <div class="space-80"></div>
+        <!-- <div class="container-fluid instagram-feed no-padding"> -->
+        <div class="container-fluid" style="background-color: transparent;"><br/>
+                <div class="row" style="background-color: transparent;">
+                <div class="col-sm-6 col-sm-offset-3">
+                    <div class="center-heading margin-btm-50">
+                        <section id="courses">
+                        <h2>Industry Interactions</h2>
+                        <span class="border-width"></span>
+                        <p>Live Interaction and Q/A sessions with Industry Veterans from Tech Giants</p>
+                        </section><br/>
+                        <a ><img src="static/img/sme/sme1.jpg" alt="" class="img-responsive"></a>
+                    </div>
+                </div>
+                
+                </div>
+      <!--       <h3 class="center-title" align="center">Follow us on instagram</h3><br/> -->
+           <!--  <a href="#"><img src="static/img/sme/sme1.jpg" alt="" class="img-responsive"></a> -->
+         <!--    <div class="row no-margin">
+                <div class="col-md-2 col-sm-3 no-padding">
+                    <a href="#"><img src="static/img/sme/sme.jpg" alt="" class="img-responsive"></a>
+                    <span>i m here</span>
+                </div>
+ -->
+                <!-- <div class="col-md-2 col-sm-3 no-padding">
+                    <a href="#"><img src="static/img/sme/amazon1.jpg" alt="" class="img-responsive"  width="180" height="150"></a>
+                </div>
+
+                <div class="col-md-2 col-sm-3 no-padding">
+                    <a href="#"><img src="static/img/sme/google.jpg" alt="" class="img-responsive"></a>
+                    <span>i m here</span>
+                </div>
+
+                <div class="col-md-2 col-sm-3 no-padding">
+                    <a href="#"><img src="images/img-7.jpg" alt="" class="img-responsive"></a>
+                </div>
+
+                <div class="col-md-2 col-sm-3 no-padding">
+                    <a href="#"><img src="static/img/sme/microsoft.jpg"alt="" class="img-responsive"></a>
+                </div><span>i m here</span>
+                <div class="col-md-2 col-sm-3 no-padding">
+                    <a href="#"><img src="static/img/sme/microsoft1.jpg" alt="" class="img-responsive"></a>
+                </div> -->
+                <div class="space-30"></div>
+            </div>
+        </div><!--instagram-->
+
+
+        <!-- <div class="pattern-bg"> -->
+        <div class="space-30"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 margin-btm-30">
+                        <h3 class="text-uppercase left-title margin-btm-40">Upcoming Events</h3>
+                        <ul class="list-unstyled event-box">
+                            <li class=" clearfix">
+                                <div class="date">
+                                    25<br>June
+                                </div>
+                                <div class="event-content">
+                                    <h4><a href="#">Startup for mobile apps</a></h4>
+                                    <p><i class="fa fa-clock-o"></i> 11:00 Am - 3:00 Am</p>
+                                    <p><i class="fa fa-map-marker"></i> Seminar Campus</p>
+                                    <p><a href="#">View Details <i class="fa fa-caret-right"></i></a></p>
+                                </div>
+                            </li><!--li-->
+                            <li class=" clearfix">
+                                <div class="date">
+                                    25<br>June
+                                </div>
+                                <div class="event-content">
+                                    <h4><a href="#">Startup for mobile apps</a></h4>
+                                    <p><i class="fa fa-clock-o"></i> 11:00 Am - 3:00 Am</p>
+                                    <p><i class="fa fa-map-marker"></i> Seminar Campus</p>
+                                    <p><a href="#">View Details <i class="fa fa-caret-right"></i></a></p>
+                                </div>
+                            </li><!--li-->
+                            <li class="text-right">
+                                <a href="#" class="btn btn-border-skin">View All Events <i class="fa fa-angle-right"></i></a>
+                            </li>
+                        </ul><!--ul-->
+                    </div><!--col-->
+                    <div class="col-md-6 margin-btm-30">
+                        <h3 class="text-uppercase  left-title margin-btm-40">Video Tour</h3>
+                        <div class="owl-theme video-slider">
+                            <div class="item">
+                                <!-- 16:9 aspect ratio -->
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    <iframe width="854" height="480" src="https://www.youtube.com/embed/jkTzHEtHd54" frameborder="0" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <!-- 16:9 aspect ratio -->
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    <iframe width="854" height="480" src="https://www.youtube.com/embed/7XZXYbhLI2M" frameborder="0" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <!-- 16:9 aspect ratio -->
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    <iframe width="520" height="293" src="https://www.youtube.com/embed/cqNmVJk7Zyg" frameborder="0" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- </div> -->
+
+       <!--  <div class="other-info">
+            <div class="container">
+                <ul class="row list-unstyled">
+                    <li class="col-md-4 shaded-bg">
+                        <h4 class="main-heading">
+                            Seminars
+                        </h4> -->
+                        <!-- <ul  class="seminars list-unstyled">
+                            <li>
+                                <h5><a href="#">Annual Parents Meeting</a></h5>
+                                <p class="info"><span>March 20, 2016</span>, 11:00Am - 3:00Pm</p>
+                                <p>
+                                    It is a long established fact that a reader will be distracted by the readable content... <a href="#">MORE</a>
+                                </p>
+                            </li>
+                            <li>
+                                <h5><a href="#">Annual Parents Meeting</a></h5>
+                                <p class="info"><span>March 20, 2016</span>, 11:00Am - 3:00Pm</p>
+                                <p>
+                                    It is a long established fact that a reader will be distracted by the readable content... <a href="#">MORE</a>
+                                </p>
+                            </li>
+                            <li>
+                                <h5><a href="#">Annual Parents Meeting</a></h5>
+                                <p class="info"><span>March 20, 2016</span>, 11:00Am - 3:00Pm</p>
+                                <p>
+                                    It is a long established fact that a reader will be distracted by the readable content... <a href="#">MORE</a>
+                                </p>
+                            </li>
+                        </ul> -->
+                    <!-- </li> -->
+                  <!--   <li class="col-md-4 white-bg">
+                        <section id='news'>
+                        <h4 class="main-heading">
+                            Latest News                            
+                        </h4>                 
+                        <div class="latest-news">
+                            <a href="#" class="thumb">
+                                <img src="http://bootstraplovers.com/templates/assan-v2.4/assan-education/images/g1.jpg" class="img-responsive" alt="" width="100"> 
+                            </a>
+                            <div class="news-content">
+                                <h5><a href="#">Loem ipsum dolor amet</a></h5>
+                                <p>
+                                    It is a long established fact that a reader will be distracted by the readable content... <a href="#">MORE</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="latest-news">
+                            <a href="#" class="thumb">
+                                <img src="http://bootstraplovers.com/templates/assan-v2.4/assan-education/images/g7.jpg" class="img-responsive" alt="" width="100"> 
+                            </a>
+                            <div class="news-content">
+                                <h5><a href="#">Loem ipsum dolor amet</a></h5>
+                                <p>
+                                    It is a long established fact that a reader will be distracted by the readable content... <a href="#">MORE</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="latest-news">
+                            <a href="#" class="thumb">
+                                <img src="http://bootstraplovers.com/templates/assan-v2.4/assan-education/images/g8.jpg" class="img-responsive" alt="" width="100"> 
+                            </a>
+                            <div class="news-content">
+                                <h5><a href="#">Loem ipsum dolor amet</a></h5>
+                                <p>
+                                    It is a long established fact that a reader will be distracted by the readable content... <a href="#">MORE</a>
+                                </p>
+                            </div>
+                        </div>
+                        </section>
+                    </li> -->
+                   <!--  <section id="register">
+                    <li class="col-md-4 shaded-bg">
+                        
+                        <h4 class="main-heading">
+                            Register Now                          
+                        </h4> 
+                        
+                        <p class="lead">
+                            It is a long established fact that a reader will be distracted by the readable content...
+                        </p>
+                       
+                        <form action="/register/" method="post" class="form" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <input type="text" name="name"class="form-control" placeholder="Your Name">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="email" class="form-control" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="mobile" class="form-control" placeholder="Mobile">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="subject" class="form-control" placeholder="Subject">
+                            </div>
+                             <div class="form-group">
+                                <input type="text" name="message" class="form-control" placeholder="Message">
+                            </div> -->
+                            <!-- <div class="text-center"> -->
+                                <!-- <input type="button" class="btn btn-skin btn-lg btn-block" value="Submit"> -->
+                                 <!-- <button type="submit" class="btn btn-skin btn-lg btn-block">Query Now</button> -->
+                            <!-- </div> -->
+                          <!--   
+                            {% buttons %}
+                            <button type="submit" class="btn btn-primary">  
+                            {% bootstrap_icon "star" %} Submit Query
+                            </button>
+                            {% endbuttons %} -->
+                   <!--      </form>
+                       
+                    </li>
+                    </section> -->
+    <!--             </ul>
+            </div>
+        </div> -->
+         
+
+
+        <!--courses slider container end--> 
+       <!-- <div class="pattern-bg">
+            <div class="container">
+                <div class="center-heading margin-btm-50">
+                    <h2>Happy Students</h2>
+                    <span class="border-width"></span>
+                    <p>It is a long established fact that a reader will be distracted by the readable content</p>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2 text-center">
+                        <div class="owl-theme testi-slider" data-ride="owl-theme">
+                            <div class="item">
+                                <img src="http://bootstraplovers.com/templates/assan-v2.4/assan-education/images/1.jpg" alt="" class="img-circle" width="100">
+                                <p>
+                                    Donec fringilla lacinia laoreet. Vestibulum ultrices blandit tempor. Aenean magna elit, varius eget quam a, posuere...
+                                </p>
+                                <h4>John Doe - <em>Web Design</em></h4>
+                                <div class="rating">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star-half-full"></i>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="http://bootstraplovers.com/templates/assan-v2.4/assan-education/images/2.jpg" alt="" class="img-circle" width="100">
+                                <p>
+                                    Donec fringilla lacinia laoreet. Vestibulum ultrices blandit tempor. Aenean magna elit, varius eget quam a, posuere...
+                                </p>
+                                <h4>John Doe - <em>Web Design</em></h4>
+                                  <div class="rating">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star-half-empty"></i>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="http://bootstraplovers.com/templates/assan-v2.4/assan-education/images/3.jpg" alt="" class="img-circle" width="100">
+                                <p>
+                                    Donec fringilla lacinia laoreet. Vestibulum ultrices blandit tempor. Aenean magna elit, varius eget quam a, posuere...
+                                </p>
+                                <h4>John Doe - <em>Web Design</em></h4>
+                                  <div class="rating">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>        -->
+
+        <div class="testimonials wow animated fadeInUp" data-wow-duration="700ms" data-wow-delay="100ms">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2 text-center">
+                        <div class="center-title">
+                            <span class="center-line"></span>
+                            <p>What they say?</p>
+                            <h3>Testimonials</h3>
+                        </div>
+
+                    </div>
+                </div><!--center heading end-->
+
+                <div class="row">
+
+                    <div class="col-sm-8 col-sm-offset-2 text-center">
+                        <div class="testi-slide">
+                            <ul class="slides">
+                                <li>
+                                    <img src="img/customer-1.jpg" alt="">
+                                    <p>
+                                        <i class="ion-quote"></i>
+                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.
+                                    </p>
+                                    <h4 class="test-author">
+                                        Rick man - <em>rock inc</em>
+                                    </h4>
+                                </li><!--testi item-->
+                                <li>
+                                    <img src="img/customer-2.jpg" alt="">
+                                    <p>
+                                        <i class="ion-quote"></i>
+                                        Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years </p>
+                                    <h4 class="test-author">
+                                        Jellia - <em>Founder of tinka inc</em>
+                                    </h4>
+                                </li><!--testi item-->
+                                <li>
+                                    <img src="img/customer-3.jpg" alt="">
+                                    <p>
+                                        <i class="ion-quote"></i>
+                                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor.</p>
+                                    <h4 class="test-author">
+                                        Smith - <em>Ceo, company inc.</em>
+                                    </h4>
+                                </li><!--testi item-->
+                            </ul>
+                        </div><!--flex slider testimonials end here-->
+                    </div>
+                </div><!--testi slider row end-->
+                <div class="divide30"></div>
+
+            </div>
+        </div><!--testimonials v-2 end-->
+        <!--testimonials end-->
+
+
+<!-- 
+        <div class="newsletter-section">
+            <div class="container">
+                 <div class="center-heading margin-btm-50">
+                    <h2>Subscribe to our newsletter</h2>
+                    <span class="border-width"></span>
+                    <p>It is a long established fact that a reader will be distracted by the readable content</p>
+                </div>
+                <form>
+                    <input type="email" class="form-control" placeholder="Eamil Id">
+                    <button type="button" class="btn btn-skin btn-lg">Subscribe</button>
+                </form>
+            </div>
+        </div> -->
+<!-- view-source:http://bootstraplovers.com/templates/assan-v2.5/landing-page/index-newsletter.html -->
+ 
+
+        <!--footer start-->
+        <footer class="footer" id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 margin-btm-30">
+                        <div class="footer-col">
+                            <h3>About zekeLabs</h3>
+                            <p>
+                               Learn. Explore. Conquer 
+                            </p>
+                        </div>
+
+
+                    </div>
+                    <div class="col-md-3 margin-btm-30">
+                        <section id ="contact">
+                        <h3>Quick links</h3>
+                        <ul class="list-unstyled contact">
+                            <li><p><a href="#">Apply now<li>
+                            <li><p><a href="#">Courses<li>
+                            <li><p><a href="#">Apply now<li>
+                            <li><p><a href="#">Terms & Conditions<li>
+               <!--              <li><a href="#">Apply now</a></li>
+                            <li><a href="#">Events</a></li>
+                            <li><a href="#">News</a></li>
+                            <li><a href="#">Courses</a></li>
+                            <li><a href="#">Terms & Conditions</a></li> -->
+                        </ul>
+                        
+                        </section>
+                     </div>
+
+                    <div class="col-md-3 margin-btm-30">
+                        <div class="footer-col">
+                            <h3>Contact</h3>
+
+                            <ul class="list-unstyled contact">
+                                <li><p><strong><i class="fa fa-map-marker"></i> Address:</strong> Old Airport Road, Bangalore, 560017</p></li> 
+                                <li><p><strong><i class="fa fa-envelope"></i> Mail Us:</strong> <a href="#">info@zekelabs.com</a></p></li>
+                                <li> <p><strong><i class="fa fa-phone"></i> Phone:</strong> +91 7838927671</p></li>
+<!--                                 <li> <p><strong><i class="fa fa-print"></i> Fax</strong> 1800 2345 2132</p></li> -->
+<!--                                 <li> <p><strong><i class="fa fa-skype"></i> Skype</strong> assan.856</p></li> -->
+                                <ul class="list-inline footer-social">
+                                    <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                </ul>
+
+                            </ul>
+                        </div>  
+
+                    </div>
+
+
+                    <div class="col-md-3 margin-btm-30">
+                        <form action="/register/" method="post" class="form" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <div class="form-group" >
+                                <input type="text" name="name" class="form-control" placeholder="Your Name">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="email" class="form-control" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="mobile" class="form-control" placeholder="Mobile">
+                            </div>
+       <!--                      <div class="form-group">
+                                <input type="text" name="subject" class="form-control" placeholder="Subject">
+                            </div> -->
+                             <div class="form-group">
+                                <textarea rows="8" cols="50" name="message" class="form-control" placeholder="Message">
+                                
+                                </textarea>
+                            </div>
+                            <div class="text-center">
+                                <!-- <button type="Submit" class="btn btn-skin btn-lg btn-block"></button> -->
+                                <button type="submit" class="btn btn-skin btn-lg btn-block">Query Now</button>
+                            </div>
+                            
+                           <!--  {% buttons %}
+                            <button type="submit" class="btn btn-primary">  
+                            {% bootstrap_icon "star" %} Submit Query
+                            </button>
+                            {% endbuttons %} -->
+                        </form>
+
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container">
+                    <span>&copy; Copyright 2016. All Right Reserved. Zekelabs</span>
+                </div>
+            </div>
+        </footer>
+
+        <div class="container"> </div>
+
+        <!--footer end-->
+        <!-- jQuery -->
+        <script src="static/js/jquery.min.js"></script>
+        <script src="http://bootstraplovers.com/templates/assan-v2.5/e-commerce/bootstrap/js/bootstrap.min.js"></script>  
+        <script src="static/js/wow.min.js"></script>
+        <script src="static/js/bootstrap-hover-dropdown.min.js"></script>
+        <script src="static/js/jquery.stellar.min.js"></script>
+        <script src="static/js/jquery.flexslider-min.js"></script>
+        <script src="static/js/owl.carousel.min.js"></script>
+        <script src="static/js/custom.js"></script>
+        <!--revolution slider plugins-->
+        <script src="static/js/jquery.themepunch.tools.min.js" type="text/javascript"></script>
+        <script src="static/js/jquery.themepunch.revolution.min.js" type="text/javascript"></script>
+        <script type="text/javascript" src="static/js/revolution-custom.js"></script>
+
+        <!-- added now   -->
+
+        <script src="http://bootstraplovers.com/templates/assan-v2.5/e-commerce/js/jquery-migrate.min.js" type="text/javascript"></script>
+        <script src="http://bootstraplovers.com/templates/assan-v2.5/e-commerce/js/jquery.easing.1.3.min.js" type="text/javascript"></script>
+            
+        <script src="http://bootstraplovers.com/templates/assan-v2.5/e-commerce/js/jquery.sticky.js" type="text/javascript"></script>
+        <script src="http://bootstraplovers.com/templates/assan-v2.5/e-commerce/js/bootstrap-hover-dropdown.min.js"></script>
+        <script src="http://bootstraplovers.com/templates/assan-v2.5/e-commerce/js/jquery.mousewheel.min.js" type="text/javascript"></script>
+
+        <script src="http://bootstraplovers.com/templates/assan-v2.5/e-commerce/custom-scrollbar/jquery.mCustomScrollbar.concat.min.js" type="text/javascript"></script>
+
+        <script src="http://bootstraplovers.com/templates/assan-v2.5/e-commerce/bower_components/flexslider/jquery.flexslider-min.js"></script>
+
+        <script src="http://bootstraplovers.com/templates/assan-v2.5/e-commerce/owl-carousel/owl.carousel.min.js" type="text/javascript"></script>
+        <script src="http://bootstraplovers.com/templates/assan-v2.5/e-commerce/owl-carousel/owl.carousel.js" type="text/javascript"></script>
+
+        <script src="http://bootstraplovers.com/templates/assan-v2.5/e-commerce/js/tweetie.min.js" type="text/javascript"></script>
+
+        <script src="http://bootstraplovers.com/templates/assan-v2.5/e-commerce/js/custom.js" type="text/javascript"></script>
+
+        <script type="text/javascript">
+            /******************************************
+             -  PREPARE PLACEHOLDER FOR SLIDER  -
+             ******************************************/
+
+            var revapi;
+            jQuery(document).ready(function () {
+                revapi = jQuery("#rev_slider").revolution({
+                    sliderType: "standard",
+                    sliderLayout: "auto",
+                    delay: 9000,
+                    navigation: {
+                        arrows: {enable: true}
+                    },
+                    gridwidth: 1230,
+                    gridheight: 500
+                });
+            }); /*ready*/
+        </script>  
+
+         <script type="text/javascript">         
+             $(document).ready(function() {
+                $("#owl-slider1").owlCarousel();
+            });
+        </script>
+        
+        <script type="text/javascript">
+        $("#owl-slider1").owlCarousel()
+        owl.play()
+        </script>
+
+
+        <!-- Why us -->
+        <!-- // <script src="http://bootstraplovers.com/templates/assan-v2.5/landing-page/bower_components/jquery/dist/jquery.min.js"></script> -->
+        
+        <script src="js/jquery-migrate.min.js" type="text/javascript"></script>
+        <script src="js/jquery.easing.1.3.min.js" type="text/javascript"></script>
+        <script src="js/jquery.backstretch.min.js" type="text/javascript"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <script src="js/smoothscroll.js"></script>
+        <script src="bower_components/wow/dist/wow.min.js"></script>
+        <script src="bower_components/lightbox2/dist/js/lightbox.min.js" type="text/javascript"></script>
+        <script src="owl-carousel/owl.carousel.min.js" type="text/javascript"></script>
+        <script src="js/modernizr.custom.97074.js" type="text/javascript"></script>
+        <script src="js/parallax.min.js" type="text/javascript"></script>
+        <script src="js/custom.js" type="text/javascript"></script>
+                <!-- Vimeo video API -->
+        <script src="http://a.vimeocdn.com/js/froogaloop2.min.js"></script>
+        <script type="text/javascript" src="js/vimeo.js"></script> 
+        <script src="contact_form/contact.js"></script>
+        <!-- Vimeo video API -->
+      <script src="js/headroom.js" type="text/javascript"></script>
+      <script>
+          // grab an element
+var myElement = document.querySelector("header");
+// construct an instance of Headroom, passing the element
+var headroom  = new Headroom(myElement);
+// initialise
+headroom.init(); 
+      </script>
+
+
+    </body>
+</html>

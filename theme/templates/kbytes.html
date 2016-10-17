@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static %}
+{% load comment_tags %}
+{% load rating_tags %}
+{% block content %}
+
+<div class="container">
+  <hr>
+  <div class="row">
+    <div class="col-md-3">
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="">Python Foundation</a></li>
+        <li class="active"><a href="#">Python Advanced</a></li>
+        <li class="active"><a href="#">Java Foundation</a></li>
+        <li class="active"><a href="#">Java Advanced</a></li>
+        <li class="active"><a href="#">Android Foundation</a></li>
+        <li class="active"><a href="#">Django Foundation</a></li>
+        <li class="active"><a href="#">Menu 2</a></li>
+        <li class="active"><a href="#">Menu 3</a></li>
+        <li class="active"><a href="#">Menu 1</a></li>
+        <li class="active"><a href="#">Menu 2</a></li>
+        <li class="active"><a href="#">Menu 3</a></li>
+      </ul>
+    </div>
+    <div class="col-md-9">
+      <p>
+      {% for topic in topics %}
+
+         {{topic}}
+
+      {% endfor %}
+      </p>
+    </div>
+    <div class="clearfix visible-lg"></div>
+  </div>
+
+</div>
+{% endblock %}
