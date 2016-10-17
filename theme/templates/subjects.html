@@ -10,21 +10,15 @@
     background-repeat: no-repeat;
     padding: 12px 20px 12px 40px;
 }
+
 </style>
 
 <div class="container">
-<h3 ><center>
-<a href="{% url "search" "python" %}"><span class="label label-default">Python</span></a>
-<a href="{% url "search" "java" %}"><span class="label label-primary">Java</span></a>
-<a href="{% url "search" "scala" %}"><span class="label label-success">Scala</span></a>
-<a href="{% url "search" "spark" %}"><span class="label label-info">Spark</span></a>
-<a href="{% url "search" "hadoop" %}"><span class="label label-warning">Handoop</span></a>
-<a href="{% url "search" "android" %}"><span class="label label-danger">Android</span></a>
-</center></h3>
+<div class="row">
+<div class="col-md-8">
+</div>
+<div class="col-md-4">
 {% if not blogs %}
-<br><br>
-<br><br>
-<br><br>
 {% endif %}
 <div style="background-color:lightgrey; " class="text-center">
 <hr>
@@ -34,9 +28,17 @@
 <hr>
 </div>
 {% if not blogs %}
-<br><br>
-<br><br>
+<h4><strong>
+<a href="{% url "search" "python" %}">Python</a><br>
+<a href="{% url "search" "java" %}">Java</a><br>
+<a href="{% url "search" "scala" %}">Scala</a><br>
+<a href="{% url "search" "spark" %}">Spark</a><br>
+<a href="{% url "search" "hadoop" %}">Handoop</a><br>
+<a href="{% url "search" "android" %}">Android</a><br>
+</strong></h4>
 <br><br>
 {% endif %}
+</div>
+</div>
 </div>
 

@@ -10,44 +10,14 @@
         <div class="row">
 
             <!-- Blog Post Content Column -->
-            <div class="col-lg-3">
-
-                <!-- Blog Post -->
+            <div class="col-lg-9">
 
                 <!-- Preview Image -->
                 <img class="img-responsive" src="/static/media/{{ data.image }}" alt="">
-                <hr>
                 <h1>{{data.title}}</h1>
 
-            </div>
-            <div class="col-lg-6">
-                <!-- Post Content -->
                 <blockquote>
                 <em id="overview" class="lead"><b>About the Course: </b>{{ data.overview }}</em>
-                <hr/>
-                <div class="row">
-                  <div class="col-md-1">
-                      <div class="text-right"> <img src="/static/img/assignments.svg"/> </div> 
-                  </div> 
-                  <div class="col-md-3">
-                      <strong>50+ Assignments</strong> 
-                      <p>Mentor assisted problem solving for better understanding</p>
-                  </div> 
-                  <div class="col-md-1">
-                       <div class="text-right"> <img src="/static/img/projects.svg"/>  </div> 
-                  </div> 
-                  <div class="col-md-3">
-                      <strong>4 Industry Level Projects</strong> 
-                      <p>Mentor guided projects completion for Deployment Level Understanding & Hands-on</p>
-                  </div>
-                  <div class="col-md-1">
-                       <div class="text-right"><img src="/static/img/certificate.svg"/>  </div> 
-                  </div> 
-                  <div class="col-md-3">
-                      <strong>Get Professional Certificates</strong> 
-                      <p>Avail Support & Mentorship for successful completion of certification</p>
-                  </div>
-                </div>
                 <hr/>
                 <p id="syllabus" class="lead text-center">Syllabus</p>
                 <hr/>
@@ -58,14 +28,15 @@
             </div>
 
 
-
             <div class="col-lg-3 lead" style="background-color:#eee;" >
                 <ul class="nav nav-pills nav-stacked">
                    <li><a href="#overview" class="text-center">Overview</a></li>
                    <li><a href="#syllabus" class="text-center">Syllabus</a></li>
                    <li><a href="#" class="text-center">Course Discussion</a></li>
-           <li class="active" ><div style="padding:20px;"><button type="button" class="btn btn-info btn-block" style="padding:30px; font-size:1.3em; color: white"  data-toggle="modal" data-target="#courseReg"
-      >Enroll</button></div></li>
+                   <li class="active" ><div style="padding:20px;"><button type="button" class="btn btn-info btn-block"
+                    style="padding:30px; font-size:1.3em; color: white"  data-toggle="modal" data-target="#courseReg">Enroll</button></div></li>
+            </div>
+            
             <div class="modal fade" id="courseReg" role="dialog">
             <div class="modal-dialog modal-sm">
                 <div class="modal-content" >
@@ -86,22 +57,22 @@
                             <div class="form-group">
                                 <input type="text" name="mobile" class="form-control" placeholder="Mobile">
                             </div>
-                            <div class="form-group">
-                                <input type="text" name="message" class="form-control" placeholder="Coupon Code">
+                            <h5><span class="label label-default">Message</span></h5>
+                             <div class="form-group">
+                                <textarea rows="8" cols="50" placeholder="Message" name="message" class="form-control">
+
+                                </textarea>
                             </div>
                             <div class="text-center">
                                 <button type="submit" class="btn btn-info btn-lg">Submit</button>
                             </div>
-
                         </form>
-
                     </div>
                     <div class="modal-footer">
                         <small>Reach us at +91 7838927671</small>
                     </div>
                 </div>
-            </div>
-            </div>
+
 
                </ul>
             </div>
@@ -110,4 +81,5 @@
 
 
     </div>
+</div>
  {% endblock %}

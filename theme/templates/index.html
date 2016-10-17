@@ -28,8 +28,9 @@
      <!-- for bootstrap modal -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/69938aa5d3.js"></script>
 
-  
+      
 
 
 
@@ -63,7 +64,7 @@
     background-image: url("static/img/sme/home.jpg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    height: 500px;
+    height: 550px;
 
 }
 
@@ -139,6 +140,12 @@
     background-repeat: no-repeat;
     padding: 12px 20px 12px 40px;
 }
+
+.min-search {
+   background-image:url('/static/img/tlearn-python-java-hadoop-big-data.jpg'); 
+   margin-top:100px; 
+   height:200px;
+}
 </style>
 
 
@@ -173,7 +180,7 @@ s0.parentNode.insertBefore(s1,s0);
                         <span><i class="fa fa-envelope"></i> info@zekelabs.com</span>
                     </div>
                     <div class="col-sm-6 text-right">
-                        <span><a href="/webinar/pythonbigdata/" class="apply"><i class="fa fa-pencil"></i>Upcomming Webinar - <strong>Essential Python for BigData</strong> </a></span>
+                        <span><a href="/webinar/pythonbigdata/" class="apply"><i class="fa fa-pencil"></i>Upcoming Webinar - <strong>Essential Python for BigData</strong> </a></span>
                     </div>
                 </div>
             </div>
@@ -207,7 +214,7 @@ s0.parentNode.insertBefore(s1,s0);
 
 
                     <li>
-                        <a class="page-scroll" href="/search">K-Bytes</a>
+                        <a class="page-scroll" href="/search">Techbytes</a>
 
                     </li>
 
@@ -247,10 +254,21 @@ s0.parentNode.insertBefore(s1,s0);
 
         <div class="center jumbotron hero-spacer">
 <div class="container">
-<div style="background-color:transperant; margin-top:200px" class="text-center">
+<div class="text-center min-search">
+<h1>Build a career of your choice</h1>
+<br>
+<h3>Learn the skills to stay updated in the ever-evolving IT Industry</h3>
+<br>
 <form action="{% url "search-courses"%}" method="get">
 <input class="search" style="width:70%; background-color:#FDFEFE;" type="text" name="item" placeholder="Search Courses..">
 </form>
+<br>
+<div class="row text-left" style="font-size:1.2em;">
+  <div class="col-xs-6 col-md-3" ><span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span>&nbsp;&nbsp;Instructor-led Online Classes</div>
+  <div class="col-xs-6 col-md-3" ><span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span>&nbsp;&nbsp;Classroom Learning Center</div>
+  <div class="col-xs-6 col-md-3" ><span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span>&nbsp;&nbsp;Interact with Domain Experts</div>
+  <div class="col-xs-6 col-md-3" ><span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span>&nbsp;&nbsp;Industry Level Projects</div>
+</div>
 </div>
 </div>
 
@@ -345,7 +363,7 @@ s0.parentNode.insertBefore(s1,s0);
 <section class="training-classroom container">
     <div class="row">
         <div class="col-md-3 col-sm-6 col-no-pad text-center">
-            <a href="#" class="classroom" rel="nofollow">
+            <a  class="classroom" rel="nofollow">
         <span>
           <img src="static/img/sme/classroom.ico" width="100px">
         </span>
@@ -354,7 +372,7 @@ s0.parentNode.insertBefore(s1,s0);
             </a>
         </div>
         <div class="col-md-3 col-sm-6 col-no-pad text-center">
-            <a href="#" class="virtual" rel="nofollow">
+            <a  class="virtual" rel="nofollow">
         <span>
           <img src="static/img/sme/virtual.png" width="100px">
         </span>
@@ -364,7 +382,7 @@ s0.parentNode.insertBefore(s1,s0);
             </a>
         </div>
         <div class="col-md-3 col-sm-6 col-no-pad text-center">
-            <a href="#" class="e-learning">
+            <a  class="e-learning">
         <span>
           <img src="static/img/sme/certificate.png" width="100px">
         </span>
@@ -373,7 +391,7 @@ s0.parentNode.insertBefore(s1,s0);
             </a>
         </div>
         <div class="col-md-3 col-sm-6 col-no-pad text-center">
-            <a href="#" class="corporate">
+            <a  class="corporate">
         <span>
           <img src="static/img/sme/training.png" width="100px">
         </span>
@@ -390,19 +408,30 @@ s0.parentNode.insertBefore(s1,s0);
             <div class="row" style="background-color: transparent;">
                 <div class="col-sm-6 col-sm-offset-3">
                     <div class="center-heading margin-btm-50">
-                        <section id="courses">
                         <h2>Corporate Section</h2>
                         <span class="border-width"></span>
                         <p>Our Trainers have expertise of delivering sessions & consulting to various MNCs. A few of them are here</p>
-                        </section><br/>
+                        <br/>
                         <a ><img src="static/img/sme/sme-expr.png" alt="" class="img-responsive"></a>
                     </div>
                 </div>
           </div>
     </div>
 
-
-
+         
+     <section id="courses">
+     <div class="container-fluid" style="background-color: transparent;"><br/>
+            <div class="row" style="background-color: transparent;">
+                <div class="col-sm-6 col-sm-offset-3">
+                    <div class="center-heading margin-btm-50">                
+                        <h2>Course Offerings</h2>
+                        <span class="border-width"></span>
+                        <br/>
+                    </div>
+                </div>
+          </div>
+    </div>
+    </section>
 
     <div class="container">
 
@@ -411,9 +440,10 @@ s0.parentNode.insertBefore(s1,s0);
 
         <div class="row">
 
-            <div class="col-lg-12">
+            <div class="col-lg-12" align="center">
 
                 <h3>Specialized Courses</h3>
+                <br/>
 
             </div>
 
@@ -432,14 +462,14 @@ s0.parentNode.insertBefore(s1,s0);
 
                     <div class="caption">
 
-                        <h3>Spark with Python</h3>
-                        <br>
+                        <h3>Big Data & Hadoop</h3>
+                        <br/>
                         <p></p>
 
                         <p>
 
                             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#courseReg">Enroll Now</button>
-                            <a href="/courses/sparkwithpython" class="btn btn-default">&nbsp;&nbsp;More Info&nbsp;&nbsp;</a>
+                            <a href="/courses/bigdatahadoop" class="btn btn-default">&nbsp;&nbsp;More Info&nbsp;&nbsp;</a>
                             
 
                         </p>
@@ -460,14 +490,14 @@ s0.parentNode.insertBefore(s1,s0);
 
                     <div class="caption">
 
-                        <h3>Spark with Scala</h3>
+                        <h3>Spark with Python</h3>
                         <br>
                         <p></p>
 
                         <p>
 
                             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#courseReg">Enroll Now</button>
-                            <a href="/courses/spark" class="btn btn-default">&nbsp;&nbsp;More Info&nbsp;&nbsp;</a>
+                            <a href="/courses/sparkwithpython" class="btn btn-default">&nbsp;&nbsp;More Info&nbsp;&nbsp;</a>
 
                         </p>
 
@@ -487,14 +517,14 @@ s0.parentNode.insertBefore(s1,s0);
 
                     <div class="caption">
 
-                        <h3>Hadoop Foundation</h3>
+                        <h3>Spark with Scala</h3>
                         <br>
                         <p></p>
 
                         <p>
 
                             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#courseReg">Enroll Now</button>
-                            <a href="/courses/bigdatahadoop" class="btn btn-default">&nbsp;&nbsp;More Info&nbsp;&nbsp;</a>
+                            <a href="/courses/sparkwithscala" class="btn btn-default">&nbsp;&nbsp;More Info&nbsp;&nbsp;</a>
 
                         </p>
 
@@ -514,14 +544,14 @@ s0.parentNode.insertBefore(s1,s0);
 
                     <div class="caption">
 
-                        <h3>Django</h3>
+                        <h3>Machine Learning</h3>
                         <br>
                         <p></p>
 
                         <p>
 
                             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#courseReg">Enroll Now</button>
-                            <a href="/courses/django" class="btn btn-default">&nbsp;&nbsp;More Info&nbsp;&nbsp;</a>
+                            <a href="/courses/machinelearning" class="btn btn-default">&nbsp;&nbsp;More Info&nbsp;&nbsp;</a>
 
                         </p>
 
@@ -549,14 +579,13 @@ s0.parentNode.insertBefore(s1,s0);
 
                     <div class="caption">
 
-                        <h3>Spring</h3>
-                        <br>
+                        <h3>Amazon Web Services</h3>
                         <p></p>
 
                         <p>
 
                             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#courseReg">Enroll Now</button>
-                            <a href="/courses/spring" class="btn btn-default">&nbsp;&nbsp;More Info&nbsp;&nbsp;</a>
+                            <a href="/courses/aws" class="btn btn-default">&nbsp;&nbsp;More Info&nbsp;&nbsp;</a>
 
                         </p>
 
@@ -576,14 +605,14 @@ s0.parentNode.insertBefore(s1,s0);
 
                     <div class="caption">
 
-                        <h3>Hibernate</h3>
+                        <h3>Java 8</h3>
                         <br>
                         <p></p>
 
                         <p>
 
                             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#courseReg">Enroll Now</button>
-                            <a href="/courses/hibernate" class="btn btn-default">&nbsp;&nbsp;More Info&nbsp;&nbsp;</a>
+                            <a href="/courses/functionaljava8" class="btn btn-default">&nbsp;&nbsp;More Info&nbsp;&nbsp;</a>
 
                         </p>
 
@@ -603,13 +632,13 @@ s0.parentNode.insertBefore(s1,s0);
 
                     <div class="caption">
 
-                        <h3>Amazon Web Services</h3>
+                        <h3>Angular Js</h3>
+                        <br/>
                         <p></p>
-
                         <p>
 
                             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#courseReg">Enroll Now</button>
-                            <a href="/courses/aws" class="btn btn-default">&nbsp;&nbsp;More Info&nbsp;&nbsp;</a>
+                            <a href="/courses/angularjs" class="btn btn-default">&nbsp;&nbsp;More Info&nbsp;&nbsp;</a>
 
                         </p>
 
@@ -627,14 +656,14 @@ s0.parentNode.insertBefore(s1,s0);
 
                     <div class="caption">
 
-                        <h3>Ansible</h3>
+                        <h3>Android</h3>
                         <br> 
                         <p></p>
 
                         <p>
 
                             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#courseReg">Enroll Now</button>
-                            <a href="/courses/ansible" class="btn btn-default">&nbsp;&nbsp;More Info&nbsp;&nbsp;</a>
+                            <a href="/courses/android" class="btn btn-default">&nbsp;&nbsp;More Info&nbsp;&nbsp;</a>
 
                         </p>
 
@@ -655,9 +684,10 @@ s0.parentNode.insertBefore(s1,s0);
 
         <div class="row">
 
-            <div class="col-lg-12">
+            <div class="col-lg-12" align="center">
 
                 <h3>Foundation Courses</h3>
+                <br/>
 
             </div>
 
@@ -730,14 +760,13 @@ s0.parentNode.insertBefore(s1,s0);
 
                     <div class="caption">
 
-                        <h3>Perl Foundation</h3>
-                        <br>
+                        <h3>HTML CSS JS Foundation</h3>
                         <p></p>
 
                         <p>
 
                             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#courseReg">Enroll Now</button>
-                            <a href="/courses/perl" class="btn btn-default">&nbsp;&nbsp;More Info&nbsp;&nbsp;</a>
+                            <a href="/courses/htmlcssjs" class="btn btn-default">&nbsp;&nbsp;More Info&nbsp;&nbsp;</a>
 
                         </p>
 
@@ -757,14 +786,14 @@ s0.parentNode.insertBefore(s1,s0);
 
                     <div class="caption">
 
-                        <h3>Javascript Foundation</h3>
-
+                        <h3>Mysql Foundation</h3>
+                        <br/>
                         <p></p>
 
                         <p>
 
                             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#courseReg">Enroll Now</button>
-                            <a href="/courses/javascript" class="btn btn-default">&nbsp;&nbsp;More Info&nbsp;&nbsp;</a>
+                            <a href="/courses/mysql" class="btn btn-default">&nbsp;&nbsp;More Info&nbsp;&nbsp;</a>
 
                         </p>
 
@@ -780,9 +809,7 @@ s0.parentNode.insertBefore(s1,s0);
 
         <!-- Page Features -->
 
-        <div class="row text-center">
-
-
+       <!-- <div class="row text-center">
 
             <div class="col-md-3 col-xs-6 hero-feature">
 
@@ -806,12 +833,11 @@ s0.parentNode.insertBefore(s1,s0);
                     </div>
 
                 </div>
-
-            </div>
-
+            </div> -->
 
 
-            <div class="col-md-3 col-xs-6 hero-feature">
+
+        <!--    <div class="col-md-3 col-xs-6 hero-feature">
 
                 <div class="thumbnail">
 
@@ -886,20 +912,21 @@ s0.parentNode.insertBefore(s1,s0);
 
                 </div>
 
-            </div>
+            </div> 
 
 
 
-        </div>
+        </div> -->
         <hr>
 
         <!-- Title: Premium Courses -->
 
         <div class="row">
 
-            <div class="col-lg-12">
+            <div class="col-lg-12" align="center">
 
-                <h3>Premium Courses</h3>
+                <h3>Framework Courses</h3>
+                <br/>  
 
             </div>
 
@@ -918,14 +945,14 @@ s0.parentNode.insertBefore(s1,s0);
 
                     <div class="caption">
 
-                        <h3>Spark with Scala</h3>
+                        <h3>Spring</h3>
                         <br>
                         <p></p>
 
                         <p>
 
                             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#courseReg">Enroll Now</button>
-                            <a href="/courses/spark" class="btn btn-default">&nbsp;&nbsp;More Info&nbsp;&nbsp;</a>
+                            <a href="/courses/spring" class="btn btn-default">&nbsp;&nbsp;More Info&nbsp;&nbsp;</a>
 
                         </p>
 
@@ -945,15 +972,14 @@ s0.parentNode.insertBefore(s1,s0);
 
                     <div class="caption">
 
-                        <h3>Advanced Python</h3>
+                        <h3>Hibernate</h3>
                         <br>
                         <p></p>
 
                         <p>
 
                             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#courseReg">Enroll Now</button>
-                            <a href="/courses/pythonadvanced" class="btn btn-default">&nbsp;&nbsp;More Info&nbsp;&nbsp;</a>
-
+                            <a href="/courses/hibernate" class="btn btn-default">&nbsp;&nbsp;More Info&nbsp;&nbsp;</a>
                         </p>
 
                     </div>
@@ -972,14 +998,14 @@ s0.parentNode.insertBefore(s1,s0);
 
                     <div class="caption">
 
-                        <h3>Mastering Perl</h3>
+                        <h3>Django</h3>
                         <br>
                         <p></p>
 
                         <p>
 
                             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#courseReg">Enroll Now</button>
-                            <a href="/courses/perl" class="btn btn-default">&nbsp;&nbsp;More Info&nbsp;&nbsp;</a>
+                            <a href="/courses/django" class="btn btn-default">&nbsp;&nbsp;More Info&nbsp;&nbsp;</a>
 
                         </p>
 
@@ -999,14 +1025,14 @@ s0.parentNode.insertBefore(s1,s0);
 
                     <div class="caption">
 
-                        <h3>Object Oriented JavaSciprt</h3>
-
+                        <h3>Flask</h3>
+                        <br/>
                         <p></p>
 
                         <p>
 
                             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#courseReg">Enroll Now</button>
-                            <a href="/courses/javascriptoops" class="btn btn-default">&nbsp;&nbsp;More Info&nbsp;&nbsp;</a>
+                            <a href="/courses/flask" class="btn btn-default">&nbsp;&nbsp;More Info&nbsp;&nbsp;</a>
 
                         </p>
 
@@ -1020,69 +1046,78 @@ s0.parentNode.insertBefore(s1,s0);
         </div>           
 
         <hr>
+       
+        <div class="container-fluid" style="background-color: transparent;"><br/>
+            <div class="row" style="background-color: transparent;">
+                <div class="col-sm-6 col-sm-offset-3">
+                    <div class="center-heading margin-btm-50">
+                        <h2>Upcoming Events</h2>
+                        <span class="border-width"></span>
+                    </div>
+                </div>
+            </div>
+         </div>
 
 
         <div class="space-30"></div>
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 margin-btm-30">
-                        <h3 class="text-uppercase left-title margin-btm-40">Upcoming Events</h3>
                         <ul class="list-unstyled event-box">
                             <li class=" clearfix">
                                 <div class="date">
-                                    25<br>Oct
+                                    05<br>Nov
                                 </div>
                                 <div class="event-content">
                                     <h4><a href="#">Python for Everybody</a></h4>
-                                    <p><i class="fa fa-clock-o" style="color:grey"></i> 11:00 Am - 3:00 Am</p>
+                                    <p><i class="fa fa-clock-o" style="color:grey"></i> 02:00 Pm - 05:00 Pm</p>
                                     <p><i class="fa fa-map-marker" style="color:grey"></i> Instructor led Live Session</p>
                                     <p><a href="#">View Details <i class="fa fa-caret-right"></i></a></p>
                                 </div>
                             </li><!--li-->
                             <li class=" clearfix">
                                 <div class="date">
-                                    26<br>Oct
+                                    06<br>Nov
                                 </div>
                                 <div class="event-content">
                                     <h4><a href="#">Spark Foundation Course</a></h4>
-                                    <p><i class="fa fa-clock-o" style="color:grey"></i> 11:00 Am - 3:00 Am</p>
+                                    <p><i class="fa fa-clock-o" style="color:grey"></i> 02:00 Pm - 05:00 Pm</p>
                                     <p><i class="fa fa-map-marker" style="color:grey"></i>Instructor led Live Session</p>
                                     <p><a href="#">View Details <i class="fa fa-caret-right"></i></a></p>
                                 </div>
                             </li><!--li-->
-                            <li class="text-right">
+                          <!---  <li class="text-right">
                                 <a href="#" class="btn btn-border-skin">View All Events <i class="fa fa-angle-right"></i></a>
-                            </li>
+                            </li> -->
                         </ul><!--ul-->
                     </div><!--col-->
            <div class="col-md-6 margin-btm-30">
-                                            <h3 class="text-uppercase left-title margin-btm-40">Recent Events</h3>
                         <ul class="list-unstyled event-box">
                             <li class=" clearfix">
                                 <div class="date">
-                                    25<br>June
+                                    19<br>Nov
                                 </div>
                                 <div class="event-content">
-                                    <h4><a href="#">Startup for mobile apps</a></h4>
+                                    <h4><a href="#">Java Foundation for Android Application</a></h4>
                                     <p><i class="fa fa-clock-o"></i> 11:00 Am - 3:00 Am</p>
                                     <p><i class="fa fa-map-marker"></i> Seminar Campus</p>
-                                    <p><a href="#">Watch Recordings<i class="fa fa-caret-right"></i></a></p>
+                             <!--       <p><a href="#">Watch Recordings<i class="fa fa-caret-right"></i></a></p> -->
                                 </div>
                             </li><!--li-->
                             <li class=" clearfix">
                                 <div class="date">
-                                    25<br>June
+                                   20<br>Nov
                                 </div>
                                 <div class="event-content">
-                                    <h4><a href="#">Startup for mobile apps</a></h4>
+                                    <h4><a href="#">Android Mobile Application Developement</a></h4>
                                     <p><i class="fa fa-clock-o"></i> 11:00 Am - 3:00 Am</p>
                                     <p><i class="fa fa-map-marker"></i> Seminar Campus</p>
                                     <p><a href="#">Watch Recordings <i class="fa fa-caret-right"></i></a></p>
                                 </div>
                             </li><!--li-->
-                            <li class="text-right">
+                          <!--  <li class="text-right">
                                 <a href="#" class="btn btn-border-skin">View All Events <i class="fa fa-angle-right"></i></a>
-                            </li>
+                            </li> -->
                         </ul><!--ul-->
                     </div><!--col-->
 
@@ -1201,8 +1236,8 @@ s0.parentNode.insertBefore(s1,s0);
                         <ul class="list-unstyled contact">
                             <li><p><a href="#" data-toggle="modal" data-target="#myModal">Apply now<li>
                             <li><p><a href="/#courses">Courses<li>
-                            <li><p><a href="/termsandcondition">Terms & Conditions<li>
                             <li><p><a href="/smes/">Subject Matter Experts<li>
+                            <!--   <li><p><a href="/termsandcondition">Terms & Conditions<li> -->
                         </ul>
                         </section>
                      </div>
@@ -1216,9 +1251,9 @@ s0.parentNode.insertBefore(s1,s0);
                                 <li><p><strong><i class="fa fa-envelope"></i> Mail Us:</strong> <a href="#">info@zekelabs.com</a></p></li>
                                 <li> <p><strong><i class="fa fa-phone"></i> Phone:</strong> +91 7838927671</p></li>
                                 <ul class="list-inline footer-social">
-                                    <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+                                    <li><a href= "https://www.facebook.com/zekeLabs-255057498227660/"><i class="fa fa-facebook-square"></i></a></li>
+                                    <li><a href="https://twitter.com/zekeLabs"><i class="fa fa-twitter-square"></i></a></li>
+                            <!--     <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li> -->
                                     <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
                                 </ul>
 

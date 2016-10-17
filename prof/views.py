@@ -112,7 +112,8 @@ def searchtag_blogs(request,slug = None):
     if slug:
        blogs = BlogPost.objects.filter( Q(title__icontains=slug)| Q(content__icontains=slug))
     else:
-       blogs = None
+       blogs = BlogPost.objects.all().order_by('-publish_date')
+       print blogs
     return render(request, 'search.html', locals())
  
 def show_blog_by_slug(request,slug):
@@ -126,7 +127,7 @@ def search_courses(request,slug = None):
     if slug:
        courses = Courses.objects.filter( Q(title__icontains=slug)| Q(overview__icontains=slug))
     else:
-       courses = None
+       courses = None 
     return render(request, 'search-courses.html', locals())
 
 def academia(request):
