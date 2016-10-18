@@ -46,7 +46,7 @@ urlpatterns += [
     url("^home$", direct_to_template, {"template": "index.html"}, name="home"),
     url("^bases$", direct_to_template, {"template": "bases.html"}, name="bases"),
     url(r'^register/(?P<slug>\w*)/$', profviews.register, name='register'),
-    url(r'^register/$', profviews.register_generic, name='register_generic'),
+    url(r'^register/$', profviews.register, name='register_generic'),
     url(r'^comments/', include('django_comments.urls')), 
     url(r'^kbytes/$', profviews.show_blogs, name='show_blogs'),
     url(r'^search/(?P<slug>\w*)/$', profviews.searchtag_blogs, name='search'),

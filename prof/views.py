@@ -49,7 +49,7 @@ def register(request,slug = None):
             print subject 
             form.save()
             from_email = 'zekelabs@gmail.com'
-            msg = EmailMultiAlternatives(subject, 'From ' + mobile + ' ' + email + ' ' + message, from_email, ['zekelabs@gmail.com'])
+            msg = EmailMultiAlternatives('Course Query', 'From ' + mobile + ' ' + email + ' ' + message, from_email, ['zekelabs@gmail.com'])
             msg.send()        
             return render(request,'done.html',locals())
         return render(request,'notdone.html',locals())
@@ -102,7 +102,6 @@ def show_blogs(request):
     return render(request, 'kbytes.html', locals())
  
 def show_blog(request,slug):
-    print slug
     blog = BlogPost.objects.get(id=slug)
     return render(request, 'kbyte.html', locals())
  
@@ -117,7 +116,7 @@ def searchtag_blogs(request,slug = None):
     return render(request, 'search.html', locals())
  
 def show_blog_by_slug(request,slug):
-    print slug
+    blogs = BlogPost.objects.all()
     blog = BlogPost.objects.get(slug=slug)
     return render(request, 'kbyte.html', locals())
  

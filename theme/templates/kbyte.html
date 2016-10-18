@@ -3,13 +3,78 @@
 {% load comment_tags %}
 {% load rating_tags %}
 {% block content %}
-<div class="container">
-{% include "searchbar.html" %}
-<h1>{{ blog.title | safe  }}</h1>
-{{ blog.content | safe  }}
 
+<style>
+.search {
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 14px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('/static/img/searchicon.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+}
+</style>
+
+
+<div class="container">
+ <div class="container-fluid" style="background-color: transparent;"><br/>
+            <div class="row" style="background-color: transparent;">
+                <div class="col-sm-6 col-sm-offset-3">
+                    <div class="center-heading margin-btm-50">
+                        <section id="courses">
+                        <h2>TECHBYTES</h2>
+                        <span class="border-width"></span>
+                        <h4></h4>
+                        </section>
+                    </div>
+             </div>
+       </div>
+ </div>
+
+<h5 class="text-center">
+<a href="{% url "search" "python" %}">Python</a>&nbsp;|&nbsp;
+<a href="{% url "search" "java" %}">Java</a>&nbsp;|&nbsp;
+<a href="{% url "search" "scala" %}">Scala</a>&nbsp;|&nbsp;
+<a href="{% url "search" "spark" %}">Spark</a>&nbsp;|&nbsp;
+<a href="{% url "search" "hadoop" %}">Handoop</a>&nbsp;|&nbsp;
+<a href="{% url "search" "android" %}">Android</a>&nbsp;
+</h5>
+<br>
+<div class="row">
+<div class="col-md-8 col-xs-12">
+
+{% url 'blog' blog.slug as the_url %}
+<div class="well well-sm">
+<h2>{{ blog.title | safe  }}</h2>
+{{blog.created}}
+</div>
+<div style="font-size:1.5em">
+{{blog.content | safe}}
+</div>
 <hr>
-<h5>There are {{ blog.comments_count }} comment{{ blog.comments_count|pluralize }}</h3>
+<hr>
 {% comments_for blog %}
+</div>
+<div class="col-md-4 col-xs-12">
+<div  class="text-center">
+<form action="{% url "search"%}" method="get">
+<input class="search" style="width:90%" type="text" name="item" placeholder="Search..">
+</form>
+</div>
+<br><br>
+{% for blog in blogs %}
+{% url 'blog' blog.slug as the_url %}
+<a href="{{ the_url }}"><h5 style="padding-left:10%">{{ blog.title | safe  }}</a></h5>
+{% endfor %}
+
+</div>
+
+
+</div>
+</div>
+</div>
 </div>
 {% endblock %}

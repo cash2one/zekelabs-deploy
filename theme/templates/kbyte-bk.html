@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+{% load comment_tags %}
+{% load rating_tags %}
+{% block content %}
+
+<style>
+input {
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: white;
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 5px 7px 5px 10px;
+}
+textarea {
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: white;
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 5px 7px 5px 10px;
+    width: 80%;
+}
+</style>
+
+
+<div class="container">
+{% include "searchbar.html" %}
+<h1>{{ blog.title | safe  }}</h1>
+{{ blog.content | safe  }}
+
+<hr>
+<h5>There are {{ blog.comments_count }} comment{{ blog.comments_count|pluralize }}</h3>
+{% comments_for blog %}
+</div>
+{% endblock %}

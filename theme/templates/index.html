@@ -18,6 +18,8 @@
 
     <meta name="google-site-verification" content="MgvfswycJCojQjkRceHT8CWrHN61k-28Awk1w17U9cw" />
 
+    <meta property="og:image" content="http://www.zekelabs.com">
+
     <title>zekeLabs - Learn & Grow</title>
 
 
@@ -94,7 +96,7 @@
 
 #slider {
   width: 100%;
-  height: 250px;
+  height: 350px;
   overflow: hidden;
 }
 .slides {
@@ -107,15 +109,14 @@
   list-style-type: none;
   text-align: center;
   width: 100%;
-  height: 250px;
   top: 0;
   left: 0;
 }
-.slide1 {background: #E8E2E0; padding: 30px}
-.slide2 {background: #E8E2E0; padding: 30px}
-.slide3 {background: #E8E2E0; padding: 30px}
-.slide4 {background: #E8E2E0; padding: 30px}
-.slide5 {background: #E8E2E0; padding: 30px}
+.slide1 {background: #FFFFFF; padding: 5px}
+.slide2 {background: #FFFFFF; padding: 5px}
+.slide3 {background: #FFFFFF; padding: 5px}
+.slide4 {background: #FFFFFF; padding: 5px}
+.slide5 {background: #FFFFFF; padding: 5px}
 
 .comment {
   font-family: 'Roboto Condensed', sans-serif;
@@ -145,7 +146,20 @@
    background-image:url('/static/img/tlearn-python-java-hadoop-big-data.jpg'); 
    margin-top:100px; 
    height:200px;
+} 
+
+
+#toTop{
+    position: fixed;
+    bottom: 50px;
+    right: 10px;
+    cursor: pointer;
+    display: none;
 }
+
+</style>
+
+
 </style>
 
 
@@ -165,6 +179,23 @@ s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
 <!--End of Tawk.to Script-->
+
+<script type="text/javascript">
+$(document).ready(function(){
+      $('body').append('<div id="toTop" class="btn btn-info"><span class="glyphicon glyphicon-chevron-up"></span> Back to Top</div>');
+        $(window).scroll(function () {
+            if ($(this).scrollTop() != 0) {
+                $('#toTop').fadeIn();
+            } else {
+                $('#toTop').fadeOut();
+            }
+        }); 
+    $('#toTop').click(function(){
+        $("html, body").animate({ scrollTop: 0 }, 600);
+        return false;
+    });
+});
+</script>
 
 <body>
 
@@ -1136,6 +1167,8 @@ s0.parentNode.insertBefore(s1,s0);
                         <p>Live Interaction and Q/A sessions with Industry Veterans from Tech Giants</p>
                         </section><br/>
                         <a ><img src="static/img/sme/sme1.jpg" alt="" class="img-responsive"></a>
+                        <a  href="/smes/" class="btn btn-link">Know More&nbsp >></a> 
+                       <br/>
                     </div>
                 </div>
             </div>
@@ -1143,28 +1176,43 @@ s0.parentNode.insertBefore(s1,s0);
 
         <!-- Testimonial -->
         <div class="testimonial">
-        <h2 class="text-center">Testimonials</h2>
+
+        <div class="container-fluid" style="background-color: transparent;"><br/>
+            <div class="row" style="background-color: transparent;">
+                <div class="col-sm-6 col-sm-offset-3">
+                    <div class="center-heading margin-btm-50">
+                        <section id="courses">
+                        <h2>Testimonials</h2>
+                        <span class="border-width"></span>
+                        </section>
+                        <br/>
+                    </div>
+                </div>
+            </div>
+         </div>
+
+
         <div id="slider">
           <ul class="slides">
                <li class="slide slide1">
                   <div class="row">
-                  <div class="col-sm-3 text-right">     
+                  <div class="col-md-3 col-xs-3 text-right">     
                   <img src="static/img/sme/0913650001475925632_pao_0.jpg" width="100" class="img-circle"/>
                   </div> 
                   <blockquote>
-                  <p class="col-sm-7 comment">
-                     "I really enjoyed the course and found it useful as an amazing intro to Spark, he does a great job explaining everything to you. Clear explanation, code works perfect. I moved to a new job, and now I am working with a leading healthcare organization doing a job that I love. All in all, highly recommended for anybody interested in learning Spark or any other big data technology."<br/> -- Mrinal, Bank of America
+                  <p class="col-md-7 col-xs-9 comment">
+                     "I really enjoyed the course and found it useful as an amazing intro to Spark, he does a great job explaining everything to you. Clear explanation, code works perfect.All in all, highly recommended for anybody interested in learning Spark or any other big data technology."<br/> -- Mrinal, Bank of America
                   </p>
                   <br/>
                   </div>
                </li>
                <li class="slide slide2">
                   <div class="row">
-                  <div class="col-sm-3 text-right">     
+                  <div class="col-md-3 col-xs-3 text-right">     
                   <img src="static/img/sme/0498049001475925701_deo_0.jpg" width="100" class="img-circle"/>
                   </div> 
                   <blockquote>
-                  <p class="col-sm-7 comment">
+                  <p class="col-md-7 col-xs-9 comment">
                      "Post course support & certification helped me shape up my career"<br/> -- Arun Deori
                   </p>
                   <br/>
@@ -1172,11 +1220,11 @@ s0.parentNode.insertBefore(s1,s0);
                </li>
                <li class="slide slide3">
                   <div class="row">
-                  <div class="col-sm-3 text-right">     
+                  <div class="col-md-3 col-xs-3 text-right">     
                   <img src="static/img/sme/pixee.jpg" width="100" class="img-circle"/>
                   </div> 
                   <blockquote>
-                  <p class="col-sm-7 comment">
+                  <p class="col-md-7 col-xs-9 comment">
                      "Very professional and has in depth knowledge on the subject. Most importantly know how to teach. "<br/> -- Chiros Goswami
                   </p>
                   <br/>
@@ -1184,12 +1232,12 @@ s0.parentNode.insertBefore(s1,s0);
 
                <li class="slide slide4">
                   <div class="row">
-                  <div class="col-sm-3 text-right">     
+                  <div class="col-md-3 col-xs-3 text-right">     
                   <img src="static/img/sme/IMG-20161008-WA0001.jpg" width="100" class="img-circle"/>
                   </div> 
                   <blockquote>
-                  <p class="col-sm-7 comment">
-                     "ZekeLabs is by far the best learning center. I have seen so far when it comes to technical studies. Instructor was very patient to listen and answer all the queries. Always finds a way to make to training as interesting as possible by challenging you with interesting problems. I was in fact skeptical about taking any technical course before I came across Zekelabs. But now I'm thinking of taking more courses from here. I found learning from their training to be much more effective than self learning using online resources. Highly recommended! Thanks Zekelabs. :)"<br/> -- Pratibha, TCS 
+                  <p class="col-md-7 col-xs-9 comment">
+                     "ZekeLabs is by far the best learning center.I was in fact skeptical about taking any technical course before I came across Zekelabs. But now I'm thinking of taking more courses from here. I found learning from their training to be much more effective than self learning using online resources. Highly recommended! Thanks Zekelabs. :)"<br/> -- Pratibha, TCS 
                   </p>
                   <br/>
                   </div>
@@ -1197,11 +1245,11 @@ s0.parentNode.insertBefore(s1,s0);
                   
                <li class="slide slide5">
                   <div class="row">
-                  <div class="col-sm-3 text-right">     
+                  <div class="col-md-3 col-xs-3 text-right">     
                   <img src="static/img/sme/pandu.jpg" width="100" class="img-circle"/>
                   </div> 
                   <blockquote>
-                  <p class="col-sm-7 comment">
+                  <p class="col-md-7 col-xs-9 comment">
                      "I found his teaching amazing.I wasn't a progamming guy but the way he trained me in python and provided me the required programming approach led me to find it interesting."<br/> -- Ashish Pandey, Guavas Technologies
                   </p>
                   <br/>
@@ -1222,13 +1270,14 @@ s0.parentNode.insertBefore(s1,s0);
                 <div class="row">
                     <div class="col-md-3 margin-btm-30">
                         <div class="footer-col">
-                        <a  href="/aboutus"><div class="company-name"> ABOUT ZEKELABS</div></a>
-                            <p>
-                               Learn. Explore. Conquer
-                            </p>
+                        <div class="company-name"><strong>zekeLabs</strong></div>
                         </div>
-
-
+                        </br>
+                        <ul class="list-unstyled contact">
+                            <li><p><a href="/aboutus">About</li>
+                            <li><p><a href="/smes/">Subject Matter Experts</li>
+                            <li><p><a href="/academia/">Careers</li>
+                        </ul>
                     </div>
                     <div class="col-md-3 margin-btm-30">
                         <section id ="contact">

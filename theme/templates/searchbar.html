@@ -1,5 +1,5 @@
 <style>
-input[type=text] {
+.search {
     box-sizing: border-box;
     border: 2px solid #ccc;
     border-radius: 4px;
@@ -15,7 +15,7 @@ input[type=text] {
 <div style="background-color:lightgrey; " class="text-center">
 <hr>
 <form action="{% url "search-courses"%}" method="get">
-<input style="width:70%" type="text" name="item" placeholder="Search Courses..">
+<input class="search" style="width:70%" type="text" name="item" placeholder="Search Courses..">
 </form>
 <hr>
 </div>
