@@ -2,7 +2,7 @@
 .search {
     box-sizing: border-box;
     border: 2px solid #ccc;
-    border-radius: 4px;
+    border-radius: 14px;
     font-size: 16px;
     background-color: white;
     background-image: url('/static/img/searchicon.png');
@@ -12,11 +12,11 @@
 }
 </style>
 
-<div style="background-color:lightgrey; " class="text-center">
-<hr>
+<br><br>
+<div class="text-center">
 <form action="{% url "search-courses"%}" method="get">
 <input class="search" style="width:70%" type="text" name="item" placeholder="Search Courses..">
 </form>
-<hr>
+<br><br>
 </div>
 

@@ -37,7 +37,9 @@ urlpatterns += [
     # commented out like the others, so it's the default. You only need
     # one homepage pattern, so if you use a different one, comment this
     # one out.
-
+    url(r'^robots\.txt$', direct_to_template, {'template': 'robots.txt', 'mimetype': 'text/plain'}),
+    url(r'^.htaccess$', direct_to_template, {'template': '.htaccess', 'mimetype': 'text/plain'}),
+    url(r'^sitemap\.xml$', direct_to_template, {'template': 'sitemap.xml', 'mimetype': 'text/plain'}),
     url("^$", direct_to_template, {"template": "index.html"}, name="home"),
     url('^blog/(?P<slug>\w*)/$', profviews.show_blog_by_slug, name='blog'),
    # url('^blog/(?P<slug>\w*)/$', mezzanine.blog.views.blog_post_detail, name='kbytes_slug'),
