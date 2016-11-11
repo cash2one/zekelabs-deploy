@@ -7,115 +7,168 @@
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 <url>
-  <loc>http://zekelabs.com/</loc>
-  <changefreq>hourly</changefreq>
+  <loc>http://www.zekelabs.com/</loc>
+  <changefreq>always</changefreq>
+  <priority>1.00</priority>
 </url>
 <url>
-  <loc>http://zekelabs.com/search/</loc>
-  <changefreq>hourly</changefreq>
+  <loc>http://www.zekelabs.com/webinar/learn_python_bigdata/</loc>
+  <changefreq>always</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://zekelabs.com/academia/</loc>
-  <changefreq>hourly</changefreq>
+  <loc>http://www.zekelabs.com/smes/</loc>
+  <changefreq>always</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://zekelabs.com/courses/bigdatahadoop/</loc>
-  <changefreq>hourly</changefreq>
+  <loc>http://www.zekelabs.com/search/</loc>
+  <changefreq>always</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://zekelabs.com/courses/sparkwithpython/</loc>
-  <changefreq>hourly</changefreq>
+  <loc>http://www.zekelabs.com/academia/</loc>
+  <changefreq>always</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://zekelabs.com/courses/sparkwithscala/</loc>
-  <changefreq>hourly</changefreq>
+  <loc>http://www.zekelabs.com/courses/bigdatahadoop/</loc>
+  <changefreq>always</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://zekelabs.com/courses/machinelearning/</loc>
-  <changefreq>hourly</changefreq>
+  <loc>http://www.zekelabs.com/courses/sparkwithpython/</loc>
+  <changefreq>always</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://zekelabs.com/courses/aws/</loc>
-  <changefreq>hourly</changefreq>
+  <loc>http://www.zekelabs.com/courses/sparkwithscala/</loc>
+  <changefreq>always</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://zekelabs.com/courses/functionaljava8/</loc>
-  <changefreq>hourly</changefreq>
+  <loc>http://www.zekelabs.com/courses/machinelearning/</loc>
+  <changefreq>always</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://zekelabs.com/courses/angularjs/</loc>
-  <changefreq>hourly</changefreq>
+  <loc>http://www.zekelabs.com/courses/aws/</loc>
+  <changefreq>always</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://zekelabs.com/courses/android/</loc>
-  <changefreq>hourly</changefreq>
+  <loc>http://www.zekelabs.com/courses/functionaljava8/</loc>
+  <changefreq>always</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://zekelabs.com/courses/java/</loc>
-  <changefreq>hourly</changefreq>
+  <loc>http://www.zekelabs.com/courses/angularjs/</loc>
+  <changefreq>always</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://zekelabs.com/courses/python/</loc>
-  <changefreq>hourly</changefreq>
+  <loc>http://www.zekelabs.com/courses/android/</loc>
+  <changefreq>always</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://zekelabs.com/courses/htmlcssjs/</loc>
-  <changefreq>hourly</changefreq>
+  <loc>http://www.zekelabs.com/courses/java/</loc>
+  <changefreq>always</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://zekelabs.com/courses/mysql/</loc>
-  <changefreq>hourly</changefreq>
+  <loc>http://www.zekelabs.com/courses/python/</loc>
+  <changefreq>always</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://zekelabs.com/courses/spring/</loc>
-  <changefreq>hourly</changefreq>
+  <loc>http://www.zekelabs.com/courses/htmlcssjs/</loc>
+  <changefreq>always</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://zekelabs.com/courses/hibernate/</loc>
-  <changefreq>hourly</changefreq>
+  <loc>http://www.zekelabs.com/courses/mysql/</loc>
+  <changefreq>always</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://zekelabs.com/courses/django/</loc>
-  <changefreq>hourly</changefreq>
+  <loc>http://www.zekelabs.com/courses/spring/</loc>
+  <changefreq>always</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://zekelabs.com/courses/mean/</loc>
-  <changefreq>hourly</changefreq>
+  <loc>http://www.zekelabs.com/courses/hibernate/</loc>
+  <changefreq>always</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://zekelabs.com/smes/</loc>
-  <changefreq>hourly</changefreq>
+  <loc>http://www.zekelabs.com/courses/django/</loc>
+  <changefreq>always</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://zekelabs.com/aboutus/</loc>
-  <changefreq>hourly</changefreq>
+  <loc>http://www.zekelabs.com/courses/mean/</loc>
+  <changefreq>always</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://zekelabs.com/search/python/</loc>
-  <changefreq>hourly</changefreq>
+  <loc>http://www.zekelabs.com/aboutus/</loc>
+  <changefreq>always</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://zekelabs.com/search/java/</loc>
-  <changefreq>hourly</changefreq>
+  <loc>http://www.zekelabs.com/privacypolicy/</loc>
+  <changefreq>always</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://zekelabs.com/search/scala/</loc>
-  <changefreq>hourly</changefreq>
+  <loc>http://www.zekelabs.com/termsandcondition/</loc>
+  <changefreq>always</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://zekelabs.com/search/spark/</loc>
-  <changefreq>hourly</changefreq>
+  <loc>http://www.zekelabs.com/termsandcondition</loc>
+  <changefreq>always</changefreq>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://zekelabs.com/search/hadoop/</loc>
-  <changefreq>hourly</changefreq>
+  <loc>http://www.zekelabs.com/search/it/</loc>
+  <changefreq>always</changefreq>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://zekelabs.com/search/android/</loc>
-  <changefreq>hourly</changefreq>
+  <loc>http://www.zekelabs.com/search/python/</loc>
+  <changefreq>always</changefreq>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://zekelabs.com/termsandcondition</loc>
-  <changefreq>hourly</changefreq>
+  <loc>http://www.zekelabs.com/search/java/</loc>
+  <changefreq>always</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.zekelabs.com/search/scala/</loc>
+  <changefreq>always</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.zekelabs.com/search/spark/</loc>
+  <changefreq>always</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.zekelabs.com/search/hadoop/</loc>
+  <changefreq>always</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.zekelabs.com/search/android/</loc>
+  <changefreq>always</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.zekelabs.com/blog/how-should-i-start-learning-python/</loc>
+  <changefreq>always</changefreq>
+  <priority>0.64</priority>
 </url>
 </urlset>

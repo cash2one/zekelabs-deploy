@@ -24,11 +24,10 @@ def register_generic(request):
             mobile = form.cleaned_data['mobile']
             subject = form.cleaned_data['subject']
             message = form.cleaned_data['message']
-            
             form.save()
             from_email = 'zekelabs@gmail.com'
-            msg = EmailMultiAlternatives(subject, 'From ' + mobile + ' ' + email + ' ' + message, from_email, ['zekelabs@gmail.com'])
-            msg.send()        
+            msg = EmailMultiAlternatives(subject, 'From '+ mobile + ' ' + email +  ' ' + message, from_email, ['zekelabs@gmail.com'])
+            msg.send()
             return render(request,'done.html',locals())
         return render(request,'notdone.html',locals())
     else:
@@ -37,19 +36,24 @@ def register_generic(request):
 
 
 def register(request,slug = None):
-    subject = slug 
+    subject = slug
     print subject
     if request.method == 'POST':
-        form = RegisterCourse(request.POST)
+        if slug:
+            form = RegisterCourse(request.POST)
+        else:
+            form = Register(request.POST)
         if form.is_valid():
             name = form.cleaned_data['name']
             email = form.cleaned_data['email']
             mobile = form.cleaned_data['mobile']
             message = form.cleaned_data['message']
+            if not slug:
+                subject = form.cleaned_data['subject']
             print subject 
             form.save()
             from_email = 'zekelabs@gmail.com'
-            msg = EmailMultiAlternatives('Course Query', 'From ' + mobile + ' ' + email + ' ' + message, from_email, ['zekelabs@gmail.com'])
+            msg = EmailMultiAlternatives(subject, 'From ' + name + ' ' + mobile + ' ' + email + ' ' +subject +' ' + message, from_email, ['zekelabs@gmail.com'])
             msg.send()        
             return render(request,'done.html',locals())
         return render(request,'notdone.html',locals())
@@ -126,7 +130,7 @@ def search_courses(request,slug = None):
     if slug:
        courses = Courses.objects.filter( Q(title__icontains=slug)| Q(overview__icontains=slug))
     else:
-       courses = None 
+       courses = None
     return render(request, 'search-courses.html', locals())
 
 def academia(request):
@@ -137,4 +141,7 @@ def aboutus(request):
 
 def termsandcondition(request):
     return render(request,'termsandcondition.html', locals())
+
+def privacypolicy(request):
+    return render(request,'privacypolicy.html', locals())
 

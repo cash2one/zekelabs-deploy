@@ -10,22 +10,27 @@
         <div class="row">
 
             <!-- Blog Post Content Column -->
-            <div class="col-lg-9">
+
+                           
+                <div class="col-lg-9">
 
                 <!-- Preview Image -->
                 <img class="img-responsive" src="/static/media/{{ data.image }}" alt="">
-                <h1>{{data.title}}</h1>
+                <p>&nbsp;</p>
+                <center><h1>{{data.title}}</h1></center><p>&nbsp;</p>
+             <!---   <h3 align="center">Join Live Webinar</h3>
+                <center><a target="_blank" align="cente" href="https://global.gotomeeting.com/join/534964653">Click here !</a></center><br/> -->
+                <p id="overview" class="lead text-center">About the Webinar</p> 
+                <div class="lead">{{ data.overview | safe }}</div>
 
                 <blockquote>
-                <em id="overview" class="lead"><b>About the Course: </b>{{ data.overview }}</em>
                 <hr/>
                 <p id="syllabus" class="lead text-center">Syllabus</p>
-                <hr/>
-                <div class="lead">{{ data.content | safe }}</div>              
+                <div class="lead">{{ data.content | safe }}</div>
                 </blockquote>
                 <hr>
-
             </div>
+
 
 
             <div class="col-lg-3 lead" style="background-color:#eee;" >
