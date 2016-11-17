@@ -85,7 +85,6 @@ def register_event(request,slug = None):
 
 def course_detail(request,course): 
     data = Courses.objects.get(slug=course)
-    blogs = BlogPost.objects.all()
     return render(request, 'course_detail.html', locals()) 
 
 def show_webinars(request):
@@ -147,32 +146,27 @@ def privacypolicy(request):
     return render(request,'privacypolicy.html', locals())
 
 def show_jobs(request):
-    jobs = Jobs.objects.all().order_by('-posted_on')
+    jobs = Jobs.objects.all()
     return render(request, 'jobs.html', locals())
-
-def handle_uploaded_file(f,name):
-    with open('CV-JOBS/' + name, 'wb+') as destination:
-        for chunk in f.chunks():
-            destination.write(chunk)
 
 def apply_jobs(request,job = None):
     subject = job 
     print subject
     if request.method == 'POST':
-        if job:
+        if slug:
             form = ApplyJobs(request.POST, request.FILES)
         else:
             print 'Error' 
         if form.is_valid():
-            cv_name = request.FILES['cv_file'].name
-            handle_uploaded_file(request.FILES['cv_file'], cv_name)
             name = form.cleaned_data['name']
             email = form.cleaned_data['email']
             mobile = form.cleaned_data['mobile']
             message = form.cleaned_data['message']
+            if not job:
+                subject = form.cleaned_data['subject']
+            form.save()
             from_email = 'zekelabs@gmail.com'
             msg = EmailMultiAlternatives(subject, 'From ' + name + ' ' + mobile + ' ' + email + ' ' +subject +' ' + message, from_email, ['zekelabs@gmail.com'])
-            msg.attach_file('CV-JOBS/' + cv_name);
             msg.send()
             return render(request,'done.html',locals())
         return render(request,'notdone.html',locals())

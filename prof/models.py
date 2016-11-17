@@ -36,7 +36,7 @@ class Courses(models.Model):
 		)
 
 	title = models.CharField(max_length=70)
-	slug = models.CharField(max_length=20)
+	slug = models.CharField(max_length=40)
 	trainer = models.CharField(max_length=20)
 	sme = models.CharField(max_length=20)
 	level = models.CharField(max_length=10,choices=level)
@@ -49,6 +49,7 @@ class Courses(models.Model):
 	upcomming_batch=models.DateTimeField(auto_now=False)
         comments = CommentsField()
         rating = RatingField()
+        code_url = models.URLField(max_length=200)
 
 	def __unicode__(self):
 		return self.title + ' ' + self.overview      
@@ -91,3 +92,15 @@ class SubjectMatterExpert(models.Model):
        profile = models.TextField()
        image = models.ImageField(upload_to='photos/%Y/%m/%d', blank=True)
        subjects = models.TextField()
+
+class Jobs(models.Model):
+       title = models.CharField(max_length=100)
+       slug =  models.CharField(max_length=100)
+       details =  models.TextField()
+       num_pos =  models.IntegerField()
+       posted_on = models.DateTimeField(auto_now=True)    
+       companies = models.TextField()
+       location = models.CharField(max_length=100)
+       experience = models.CharField(max_length=40)
+       salary = models.CharField(max_length=20)
+       image = models.ImageField(upload_to='photos/%Y/%m/%d', blank=True)

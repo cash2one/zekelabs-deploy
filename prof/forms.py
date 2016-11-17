@@ -14,3 +14,10 @@ class RegisterCourse(forms.ModelForm):
     class Meta:
         model = RegisterCourse
         fields = '__all__'
+
+class ApplyJobs(forms.Form):
+    name = forms.CharField(max_length=50)
+    email = forms.EmailField(max_length=50)
+    cv_file = forms.FileField()
+    mobile = forms.CharField(max_length=20)
+    message = forms.CharField(widget=forms.Textarea)

@@ -56,10 +56,12 @@ urlpatterns += [
     url(r'^search/$', profviews.searchtag_blogs, name='search'),
     url(r'^kbytes/(?P<slug>\w*)/$', profviews.show_blog, name='kbytes'),
     #url(r'^(?P<slug>[\w\-]+)/$', 'blogs.views.post'),
-    url(r'^courses/(?P<course>\w*)/$', profviews.course_detail, name='course_detail'),
+    url(r'^courses/(?P<course>[-\w]+)/$', profviews.course_detail, name='course_detail'),
     
     url(r'^webinar/(?P<slug>[-\w]+)/$', profviews.get_webinar, name='get_webinar'),
     url(r'^webinar/$', profviews.show_webinars, name='show_webinars'),
+    url(r'^jobs/$', profviews.show_jobs, name='show_jobs'),
+    url(r'^applyjobs/(?P<job>[-\w]+)/$', profviews.apply_jobs, name='apply_jobs'),
     url(r'^smes/$', profviews.show_smes, name='show_smes'),
     url(r'^academia/$', profviews.academia, name='academia'),
     url(r'^aboutus/$', profviews.aboutus, name='aboutus'),

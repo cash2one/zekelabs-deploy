@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% load static %}
+{% load comment_tags %}
+{% load rating_tags %}
+{% block content %}
+
+
+<div class="container">
+
+<div class="container-fluid" style="background-color: transparent;"><br/>
+            <div class="row" style="background-color: transparent;">
+                <div class="col-sm-6 col-sm-offset-3">
+                    <div class="center-heading margin-btm-50">
+                        <section id="courses">
+                        <h2>Job Openings</h2>
+                        <span class="border-width"></span>
+                        <p align="left">We provide Fortune 500 & mid-size companies with high quality IT resources to meet their staffing requirements.Find the current openings below. Feel free to reach out to us if you think you are a right fit</p>
+                        </section><br/>
+                    </div>
+                </div>
+            </div>
+         </div>
+
+{% for job in jobs %}
+
+ <div class="modal fade" id="courseReg" role="dialog">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content" >
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title" align="center">Apply</h4>
+                    </div>
+                    <div class="modal-body">
+
+                        <form action="/applyjobs/{{job.slug}}/" method="post" class="form" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <div class="form-group" >
+                                <input type="text" name="name" class="form-control" placeholder="Your Name">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="email" class="form-control" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="mobile" class="form-control" placeholder="Mobile">
+                            </div>
+                            <h5><span class="label label-default">Brief of Skills</span></h5>
+                             <div class="form-group">
+                                <textarea rows="8" cols="50" placeholder="Message" name="message" class="form-control">
+
+                                </textarea>
+                            </div>
+                            <h5><span class="label label-default">Upload CV</span></h5>
+                            <div class="form-group">
+                                <input type="file" name="cv_file" class="form-control" placeholder="CV">
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-info btn-lg">Submit</button>
+                            </div>
+
+                        </form>
+
+                    </div>
+                    <div class="modal-footer">
+                        <small>Mail CV : support@zekelabs.com</small>
+                    </div>
+              </div>
+       </div>
+</div>
+
+<div class="well well-sm">
+<div class="row">
+<div class="col-md-3" style="padding-top:2%">
+<div class="thumbnail" >
+<img class="img-responsive" src="/static/media/{{ job.image }}" alt="" >
+</div>
+<center><a href="#" class="btn btn-info"  data-toggle="modal" data-target="#courseReg">&nbsp;&nbsp;Apply&nbsp;&nbsp;</a></center>
+</div>
+<div class="col-md-9" style="font-size:1.2em; padding-top:2%"> Key Skills : {{job.title}}<p></p> <p><small>Job Description : {{ job.details }}</p><p>Job Location : {{ job.location }} </p> <p>Experience : {{ job.experience }}</p><p>Salary  : {{ job.salary}} </p><hr><small>Posted on : {{ job.posted_on}}</small></small>
+</div>
+</div>
+</div>
+{% endfor %}
+</div>
+{% endblock %}
