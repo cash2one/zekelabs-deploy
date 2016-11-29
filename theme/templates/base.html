@@ -209,7 +209,10 @@ s0.parentNode.insertBefore(s1,s0);
                         <a class="page-scroll" href="/smes">SME</a>
 
                     </li>
-
+                    
+                    <li>
+                        <a class="page-scroll" data-toggle="modal" data-target="#corporateTraining" href="#corporateTraining">Corporate Training</a>
+                    </li>
 
                     <li>
 
@@ -261,6 +264,49 @@ s0.parentNode.insertBefore(s1,s0);
 
 
         </footer>
+
+            <div class="modal fade" id="corporateTraining" role="dialog">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content" >
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h5 class="modal-title" align="center">Connect with us for your <br>Corporate Training Requirements</h5>
+                    </div>
+                    <div class="modal-body">
+
+                        <form action="/register/" method="post" class="form" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <div class="form-group" >
+                                <input type="text" name="name" class="form-control" placeholder="Your Name">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="email" class="form-control" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="mobile" class="form-control" placeholder="Mobile">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="subject" class="form-control" placeholder="Organization">
+                            </div>
+                            <h5><span class="label label-default">Provide Details</span></h5>
+                             <div class="form-group">
+                                <textarea rows="8" cols="50" name="message" class="form-control" placeholder="Message">
+
+                                </textarea>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-info btn-lg">Submit</button>
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+            </div>
+
+
+
              <div class="modal fade" id="myModal" role="dialog">
             <div class="modal-dialog modal-sm">
                 <div class="modal-content" >

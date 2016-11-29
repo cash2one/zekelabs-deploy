@@ -25,10 +25,15 @@
 
                 <!-- Post Content -->
                 <blockquote>
-                <em id="overview" class="lead"><b>About the Course: </b>{{ data.overview }}</em>
+                <em id="overview" class="lead"><b>About the Course: </b><small>{{ data.overview }}</small></em>
                 <hr/>
+                <div class="row">
+                    <div class="col-md-4"><figure class="figure"><img class="img-responsive center-block" src="/static/img/assignment.png" width="100"><figcaption class="figure-caption text-center">Assignments</figcaption></figure></div>
+                    <div class="col-md-4"><figure class="figure"><img class="img-responsive center-block" src="/static/img/project.png" width="100"><figcaption class="figure-caption text-center">Industry Level Projects</figcaption></figure></div>
+                    <div class="col-md-4"><figure class="figure"><img class="img-responsive center-block" src="/static/img/certificate.png" width="100"><figcaption class="figure-caption text-center">Certification</figcaption></figure></div>
+                </div>
                 <hr/>
-                <p id="syllabus" class="lead text-center">Syllabus</p>
+                <p id="syllabus" class="lead text-center"><b>Course Curriculum</b></p>
                 <hr/>
                 <div class="lead">{{ data.content | safe }}</div>              
                 </blockquote>

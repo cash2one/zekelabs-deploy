@@ -67,6 +67,7 @@
 
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 
+    <link href="https://fonts.googleapis.com/css?family=Monda" rel="stylesheet">
      <!-- for bootstrap modal -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -148,7 +149,7 @@
 
 #slider {
   width: 100%;
-  height: 350px;
+  height: 200px;
   overflow: hidden;
 }
 .slides {
@@ -168,12 +169,10 @@
 .slide2 {background: #FFFFFF; padding: 5px}
 .slide3 {background: #FFFFFF; padding: 5px}
 .slide4 {background: #FFFFFF; padding: 5px}
-.slide5 {background: #FFFFFF; padding: 5px}
 
 .comment {
   font-family: 'Roboto Condensed', sans-serif;
-  font-style: italic;
-  font-size: 18px;
+  font-size: 14px;
   color:grey;
 }
 
@@ -207,6 +206,19 @@
     right: 10px;
     cursor: pointer;
     display: none;
+}
+
+.subject-title{
+   font-size:1.3em;
+   font:font-family: 'Monda', sans-serif;
+}
+
+.counter{
+   background-color: #3498DB;
+   color:white;
+   font-size:1.5em;
+   padding-top:4%;
+   padding-bottom:4%;
 }
 
 </style>
@@ -298,7 +310,10 @@ $(document).ready(function(){
 
                     <li>
                         <a class="page-scroll" href="/smes">SME</a>
+                    </li>
 
+                    <li>
+                        <a class="page-scroll" data-toggle="modal" data-target="#corporateTraining" href="#corporateTraining">Corporate Training</a>
                     </li>
                   
                      <li>
@@ -317,7 +332,7 @@ $(document).ready(function(){
                     </li>
 
                     <li>
-                        <a class="page-scroll"  href="#contact" style="font-weight:bold">Contact</a>
+                        <a class="page-scroll"  href="#contact" >Contact</a>
                     </li>
 
                     
@@ -443,6 +458,47 @@ $(document).ready(function(){
             </div>
             </div>
 
+
+            <div class="modal fade" id="corporateTraining" role="dialog">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content" >
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h5 class="modal-title" align="center">Connect with us for your <br>Corporate Training Requirements</h5>
+                    </div>
+                    <div class="modal-body">
+
+                        <form action="/register/" method="post" class="form" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <div class="form-group" >
+                                <input type="text" name="name" class="form-control" placeholder="Your Name">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="email" class="form-control" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="mobile" class="form-control" placeholder="Mobile">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="subject" class="form-control" placeholder="Organization">
+                            </div>
+                            <h5><span class="label label-default">Provide Details</span></h5>
+                             <div class="form-group">
+                                <textarea rows="8" cols="50" name="message" class="form-control" placeholder="Message">
+
+                                </textarea>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-info btn-lg">Submit</button>
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+            </div>
+
         </div>
 
         <!-- registration form(Modal-popup) -->
@@ -529,10 +585,10 @@ $(document).ready(function(){
 
         <div class="row">
 
-            <div class="col-lg-12" align="center">
+            <div class="col-lg-12" align="left">
 
                 <h3>Specialized Courses</h3>
-                <br/>
+                <hr>
 
             </div>
 
@@ -551,7 +607,7 @@ $(document).ready(function(){
 
                     <div class="caption">
 
-                        <h3>Big Data & Hadoop</h3>
+                        <div class="subject-title">Big Data & Hadoop</div>
                         <br/>
                         <p></p>
 
@@ -579,7 +635,8 @@ $(document).ready(function(){
 
                     <div class="caption">
 
-                        <h3>Spark with Python/Scala</h3>
+                        <div class="subject-title">Spark with Python/Scala</div>
+                        <br>
                         <p></p>
 
                         <p>
@@ -604,8 +661,7 @@ $(document).ready(function(){
                     <img src="static/img/courses/learn-data-science-training-bangalore.jpg" alt="">
 
                     <div class="caption">
-
-                        <h3>Data Science</h3>
+                        <div class="subject-title">Data Science</div>
                         <br>
                         <p></p>
 
@@ -631,8 +687,7 @@ $(document).ready(function(){
                     <img src="static/img/courses/learn-machine-learning-in-Bangalore.jpg" alt="">
 
                     <div class="caption">
-
-                        <h3>Machine Learning</h3>
+                        <div class="subject-title">Machine Learning</div>
                         <br>
                         <p></p>
 
@@ -663,44 +718,18 @@ $(document).ready(function(){
 
                 <div class="thumbnail">
 
-                    <img src="static/img/courses/learn-amazon-web-services-online-training-in-Bangalore.jpg" alt="">
+                    <img src="static/media/photos/2016/11/29/Learn-backbone-js-in-bangalore_1.png" alt="">
 
                     <div class="caption">
-
-                        <h3>Amazon Web Services</h3>
-                        <p></p>
-
-                        <p>
-
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#courseReg">Enroll Now</button>
-                            <a href="/courses/amazon-web-services-training-bangalore" class="btn btn-default">&nbsp;&nbsp;More Info&nbsp;&nbsp;</a>
-
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-
-            <div class="col-md-3 col-xs-6 hero-feature">
-
-                <div class="thumbnail">
-
-                    <img src="static/img/courses/learn-Functional-Programming-with-Java-8.jpg" alt="">
-
-                    <div class="caption">
-
-                        <h3>Java 8</h3>
+                       
+                        <div class="subject-title">Backbone.js</div>
                         <br>
                         <p></p>
 
                         <p>
 
                             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#courseReg">Enroll Now</button>
-                            <a href="/courses/java-8-training-in-bangalore" class="btn btn-default">&nbsp;&nbsp;More Info&nbsp;&nbsp;</a>
+                            <a href="/courses/backbonejs-training-in-bangalore" class="btn btn-default">&nbsp;&nbsp;More Info&nbsp;&nbsp;</a>
 
                         </p>
 
@@ -710,7 +739,30 @@ $(document).ready(function(){
 
             </div>
 
+ <div class="col-md-3 col-xs-6 hero-feature">
 
+                <div class="thumbnail">
+
+                    <img src="static/img/courses/learn-html-css-js-in-Bangalore.jpg" alt="">
+
+                    <div class="caption">
+
+                        <div class="subject-title">UI Development</div>
+                        <br>
+                        <p></p>
+
+                        <p>
+
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#courseReg">Enroll Now</button>
+                            <a href="/courses/html-css-js-training-in-bangalore" class="btn btn-default">&nbsp;&nbsp;More Info&nbsp;&nbsp;</a>
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
 
             <div class="col-md-3 col-xs-6 hero-feature">
 
@@ -720,7 +772,7 @@ $(document).ready(function(){
 
                     <div class="caption">
 
-                        <h3>Angular Js</h3>
+                        <div class="subject-title">Angular 2</div>
                         <br/>
                         <p></p>
                         <p>
@@ -744,7 +796,7 @@ $(document).ready(function(){
 
                     <div class="caption">
 
-                        <h3>Android</h3>
+                        <div class="subject-title">Android</div>
                         <br> 
                         <p></p>
 
@@ -764,7 +816,6 @@ $(document).ready(function(){
 
 
         </div>
-        <hr>
 
         <!-- /.row -->
         
@@ -772,10 +823,10 @@ $(document).ready(function(){
 
         <div class="row">
 
-            <div class="col-lg-12" align="center">
+            <div class="col-lg-12" align="left">
 
                 <h3>Foundation Courses</h3>
-                <br/>
+                <hr>
 
             </div>
 
@@ -794,7 +845,7 @@ $(document).ready(function(){
 
                     <div class="caption">
 
-                        <h3>Java Foundation</h3>
+                        <div class="subject-title">Java Foundation</div>
                         <br>
                         <p></p>
 
@@ -821,7 +872,7 @@ $(document).ready(function(){
 
                     <div class="caption">
 
-                        <h3>Python Foundation</h3>
+                        <div class="subject-title">Python Foundation</div>
                         <br>
                         <p></p>
 
@@ -844,17 +895,18 @@ $(document).ready(function(){
 
                 <div class="thumbnail">
 
-                    <img src="static/img/courses/learn-html-css-js-in-Bangalore.jpg" alt="">
+                    <img src="static/media/photos/2016/11/29/learn-scala-in-Bangalore.jpg" alt="">
 
                     <div class="caption">
 
-                        <h3>HTML CSS JS Foundation</h3>
+                        <div class="subject-title">Scala</div>
+                        <br>
                         <p></p>
 
                         <p>
 
                             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#courseReg">Enroll Now</button>
-                            <a href="/courses/html-css-js-training-in-bangalore" class="btn btn-default">&nbsp;&nbsp;More Info&nbsp;&nbsp;</a>
+                            <a href="/courses/scala-training-in-bangalore" class="btn btn-default">&nbsp;&nbsp;More Info&nbsp;&nbsp;</a>
 
                         </p>
 
@@ -874,7 +926,7 @@ $(document).ready(function(){
 
                     <div class="caption">
 
-                        <h3>PLSQL Foundation</h3>
+                        <div class="subject-title">PLSQL Foundation</div>
                         <br/>
                         <p></p>
 
@@ -895,126 +947,16 @@ $(document).ready(function(){
 
         </div>
 
-        <!-- Page Features -->
 
-       <!-- <div class="row text-center">
-
-            <div class="col-md-3 col-xs-6 hero-feature">
-
-                <div class="thumbnail">
-
-                    <img src="static/img/courses/android.jpg" alt="">
-
-                    <div class="caption">
-
-                        <h3>Android Foundation</h3>
-                        <br>
-                        <p></p>
-
-                        <p>
-
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#courseReg">Enroll Now</button>
-                            <a href="/courses/android" class="btn btn-default">&nbsp;&nbsp;More Info&nbsp;&nbsp;</a>
-
-                        </p>
-
-                    </div>
-
-                </div>
-            </div> -->
-
-
-
-        <!--    <div class="col-md-3 col-xs-6 hero-feature">
-
-                <div class="thumbnail">
-
-                    <img src="static/img/courses/mysql.png" alt="">
-
-                    <div class="caption">
-
-                        <h3>MySql Foundation</h3>
-                        <br>
-                        <p></p>
-
-                        <p>
-
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#courseReg">Enroll Now</button>
-                            <a href="/courses/mysql" class="btn btn-default">&nbsp;&nbsp;More Info&nbsp;&nbsp;</a>
-
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-
-            <div class="col-md-3 col-xs-6 hero-feature">
-
-                <div class="thumbnail">
-
-                    <img src="static/img/courses/hbase.jpg" alt="">
-
-                    <div class="caption">
-
-                        <h3>HBase Foundation</h3>
-                        <br>
-                        <p></p>
-
-                        <p>
-
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#courseReg">Enroll Now</button>
-                            <a href="/courses/hbase" class="btn btn-default">&nbsp;&nbsp;More Info&nbsp;&nbsp;</a>
-
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="col-md-3 col-xs-6 hero-feature">
-
-                <div class="thumbnail">
-
-                    <img src="static/img/courses/htmlcssjs.png" alt="">
-
-                    <div class="caption">
-
-                        <h3>UI Developement</h3>
-                        <br>
-                        <p></p>
-
-                        <p>
-
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#courseReg">Enroll Now</button>
-                            <a href="/courses/htmlcssjs" class="btn btn-default">&nbsp;&nbsp;More Info&nbsp;&nbsp;</a>
-
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div> 
-
-
-
-        </div> -->
-        <hr>
 
         <!-- Title: Premium Courses -->
 
         <div class="row">
 
-            <div class="col-lg-12" align="center">
+            <div class="col-lg-12" align="left">
 
                 <h3>Framework Courses</h3>
-                <br/>  
+                <hr>  
 
             </div>
 
@@ -1032,8 +974,7 @@ $(document).ready(function(){
                     <img src="static/img/courses/learn-spring-in-Bangalore.jpg" alt="">
 
                     <div class="caption">
-
-                        <h3>Spring</h3>
+                        <div class="subject-title">Spring & Spring Boot</div>
                         <br>
                         <p></p>
 
@@ -1056,18 +997,17 @@ $(document).ready(function(){
 
                 <div class="thumbnail">
 
-                    <img src="static/img/courses/learn-hibernate-in-Bangalore.jpg" alt="">
+                    <img src="static/media/photos/2016/11/29/Learn-ruby-on-rails-in-bangalore_1.png" alt="">
 
                     <div class="caption">
-
-                        <h3>Hibernate</h3>
+                        <div class="subject-title">Ruby on Rails</div>
                         <br>
                         <p></p>
 
                         <p>
 
                             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#courseReg">Enroll Now</button>
-                            <a href="/courses/hibernate-training-in-bangalore" class="btn btn-default">&nbsp;&nbsp;More Info&nbsp;&nbsp;</a>
+                            <a href="/courses/ruby-on-rails-training-in-bangalore" class="btn btn-default">&nbsp;&nbsp;More Info&nbsp;&nbsp;</a>
                         </p>
 
                     </div>
@@ -1085,8 +1025,7 @@ $(document).ready(function(){
                     <img src="static/img/courses/learn-django-in-Bangalore.jpg" alt="">
 
                     <div class="caption">
-
-                        <h3>Django</h3>
+                        <div class="subject-title">Django - Web Framework</div>
                         <br>
                         <p></p>
 
@@ -1112,8 +1051,7 @@ $(document).ready(function(){
                     <img src="static/img/courses/learn-mean-in-bangalore.jpg" alt="">
 
                     <div class="caption">
-
-                        <h3>MEAN - Full Stack in JavaScript</h3>
+                        <div class="subject-title">MongoDb, Express, AngularJS & NodeJS</div>
                         <p></p>
 
                         <p>
@@ -1131,6 +1069,120 @@ $(document).ready(function(){
 
         </div>           
 
+        <div class="row">
+
+            <div class="col-lg-12" align="left">
+
+                <h3>Cloud Computing Courses</h3>
+                <hr>  
+
+            </div>
+
+        </div>
+        <div class="row text-center">
+
+
+            <div class="col-md-3 col-xs-6 hero-feature">
+
+                <div class="thumbnail">
+
+                    <img src="static/media/photos/2016/11/24/learn-openstack-in-bangalore.png" alt="">
+
+                    <div class="caption">
+                        <div class="subject-title">Openstack - A Deep Dive</div>
+                        <br>
+                        <p></p>
+
+                        <p>
+
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#courseReg">Enroll Now</button>
+                            <a href="/courses/openstack-training-in-bangalore" class="btn btn-default">&nbsp;&nbsp;More Info&nbsp;&nbsp;</a>
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="col-md-3 col-xs-6 hero-feature">
+
+                <div class="thumbnail">
+
+                    <img src="static/media/photos/2016/10/21/learn-amazon-web-services-online-training-in-Bangalore.jpg" alt="">
+
+                    <div class="caption">
+                        <div class="subject-title">Amazon Web Services</div>
+                        <br>
+                        <p></p>
+
+                        <p>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#courseReg">Enroll Now</button>
+                            <a href="/courses/amazon-web-services-training-bangalore" class="btn btn-default">&nbsp;&nbsp;More Info&nbsp;&nbsp;</a>
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="col-md-3 col-xs-6 hero-feature">
+
+                <div class="thumbnail">
+
+                    <img src="static/media/photos/2016/11/24/learn-docker-bangalore.png" alt="">
+
+                    <div class="caption">
+                        <div class="subject-title">Docker - Novice to Ninja</div>
+                        <br>
+                        <p></p>
+
+                        <p>
+
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#courseReg">Enroll Now</button>
+                            <a href="/courses/docker-training-in-bangalore" class="btn btn-default">&nbsp;&nbsp;More Info&nbsp;&nbsp;</a>
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="col-md-3 col-xs-6 hero-feature">
+
+                <div class="thumbnail">
+
+                    <img src="static/media/photos/2016/11/24/learn-microsoft-azure-bangalore.jpg" alt="">
+
+                    <div class="caption">
+                        <div class="subject-title">Microsoft Azure - Be a Pro</div>
+                        <br>
+                        <p></p>
+
+                        <p>
+
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#courseReg">Enroll Now</button>
+                            <a href="/courses/microsoft-azure-training-in-bangalore" class="btn btn-default">&nbsp;&nbsp;More Info&nbsp;&nbsp;</a>
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>           
         <div class="container-fluid" style="background-color: transparent;"><br/>
             <div class="row" style="background-color: transparent;">
                 <div class="col-sm-6 col-sm-offset-3">
@@ -1207,7 +1259,6 @@ $(document).ready(function(){
 
           </div>
          </div>
-        </div>
        <!-- corporate -->
            <div class="container-fluid" style="background-color: transparent;"><br/>
             <div class="row" style="background-color: transparent;">
@@ -1221,9 +1272,15 @@ $(document).ready(function(){
                     </div>
                 </div>
           </div>
-    </div>
 
-
+       
+        <div class="row">
+         <div class="col-md-3 text-center counter">Classroom Training<br><br><b> 10000+ hours</b></div>
+         <div class="col-md-1"></div>
+         <div class="col-md-4 text-center counter">Corporate Training<br><br><b> 8000+ hours</b></div>
+         <div class="col-md-1"></div>
+         <div class="col-md-3 text-center counter">Courses<br><br><b> 100+</b></div>
+        </div>
 
 
         <!-- Testimonial -->
@@ -1248,68 +1305,55 @@ $(document).ready(function(){
           <ul class="slides">
                <li class="slide slide1">
                   <div class="row">
-                  <div class="col-md-3 col-xs-3 text-right">     
-                  <img src="static/img/sme/0913650001475925632_pao_0.jpg" width="100" class="img-circle"/>
+                  <div class="col-md-1"></div>     
+                  <div class="col-md-2">     
+                  <img src="static/img/sme/0913650001475925632_pao_0.jpg" width="80" class="img-circle"/>
                   </div> 
-                  <blockquote>
-                  <p class="col-md-7 col-xs-9 comment">
+                  <p class="col-md-7 comment">
                      "I really enjoyed the course and found it useful as an amazing intro to Spark, he does a great job explaining everything to you. Clear explanation, code works perfect.All in all, highly recommended for anybody interested in learning Spark or any other big data technology."<br/> -- Mrinal, Bank of America
                   </p>
-                  <br/>
                   </div>
                </li>
                <li class="slide slide2">
                   <div class="row">
-                  <div class="col-md-3 col-xs-3 text-right">     
-                  <img src="static/img/sme/0498049001475925701_deo_0.jpg" width="100" class="img-circle"/>
+                  <div class="col-md-1"></div>     
+                  <div class="col-md-2">     
+                  <img src="static/img/sme/0498049001475925701_deo_0.jpg" width="80" class="img-circle"/>
                   </div> 
-                  <blockquote>
-                  <p class="col-md-7 col-xs-9 comment">
+                  <p class="col-md-7 comment">
                      "Post course support & certification helped me shape up my career"<br/> -- Arun Deori
                   </p>
-                  <br/>
                   </div>
                </li>
                <li class="slide slide3">
                   <div class="row">
-                  <div class="col-md-3 col-xs-3 text-right">     
-                  <img src="static/img/sme/pixee.jpg" width="100" class="img-circle"/>
+                  <div class="col-md-1"></div>     
+                  <div class="col-md-2">     
+                  <img src="static/img/sme/pixee.jpg" width="80" class="img-circle"/>
                   </div> 
-                  <blockquote>
-                  <p class="col-md-7 col-xs-9 comment">
+                  <p class="col-md-7 comment">
                      "Very professional and has in depth knowledge on the subject. Most importantly know how to teach. "<br/> -- Chiros Goswami
                   </p>
-                  <br/>
                   </div>
 
                <li class="slide slide4">
                   <div class="row">
-                  <div class="col-md-3 col-xs-3 text-right">     
-                  <img src="static/img/sme/IMG-20161008-WA0001.jpg" width="100" class="img-circle"/>
+                  <div class="col-md-1"></div>     
+                  <div class="col-md-2">     
+                  <img src="static/img/sme/IMG-20161008-WA0001.jpg" width="80" class="img-circle"/>
                   </div> 
-                  <blockquote>
-                  <p class="col-md-7 col-xs-9 comment">
+                  <p class="col-md-7 comment">
                      "ZekeLabs is by far the best learning center.I was in fact skeptical about taking any technical course before I came across Zekelabs. But now I'm thinking of taking more courses from here. I found learning from their training to be much more effective than self learning using online resources. Highly recommended! Thanks Zekelabs. :)"<br/> -- Pratibha, TCS 
                   </p>
-                  <br/>
                   </div>
                   
                   
-               <li class="slide slide5">
-                  <div class="row">
-                  <div class="col-md-3 col-xs-3 text-right">     
-                  <img src="static/img/sme/pandu.jpg" width="100" class="img-circle"/>
-                  </div> 
-                  <blockquote>
-                  <p class="col-md-7 col-xs-9 comment">
-                     "I found his teaching amazing.I wasn't a progamming guy but the way he trained me in python and provided me the required programming approach led me to find it interesting."<br/> -- Ashish Pandey, Guavas Technologies
-                  </p>
-                  <br/>
-                  </div>
-
           </ul>
         </div>
         </div>
+
+        </div>
+    </div>
 <!--  social media shareing strip -->
             <div class="a2a_kit a2a_kit_size_32 a2a_floating_style a2a_vertical_style" style="left:0px; bottom:0px;">
             <a class="a2a_button_facebook"></a>
