@@ -69,7 +69,7 @@ def register_event(request,slug = None):
         if form.is_valid():
             name = form.cleaned_data['name']
             email = form.cleaned_data['email']
-            mobile = form.cleaned_data['mobile']
+    #        mobile = form.cleaned_data['mobile']
             couponcode = form.cleaned_data['message']
             print couponcode
             form.save()
@@ -85,6 +85,9 @@ def register_event(request,slug = None):
 
 def course_detail(request,course): 
     data = Courses.objects.get(slug=course)
+    keyword = course.split('-')[0]
+    courses = Courses.objects.filter( Q(title__icontains=keyword)| Q(content__icontains=keyword))
+    suggested_courses = courses[:3]
     blogs = BlogPost.objects.all()
     return render(request, 'course_detail.html', locals()) 
 

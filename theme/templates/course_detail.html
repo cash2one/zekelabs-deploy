@@ -38,7 +38,6 @@
                 <div class="lead">{{ data.content | safe }}</div>              
                 </blockquote>
                 <hr>
-
             </div>
 
 
@@ -102,9 +101,23 @@
            {% endfor %}
 
            </div>
+           <h3>Recommended Courses</h3>
+           <hr>
+           {% for course in suggested_courses %}          
+                <div class="col-md-4">
+                <div class="thumbnail" style="padding:2%">
+                <img class="img-responsive" src="/static/media/{{ course.small_image }}" alt=""  width="300">
+                <div class="caption">
+                <center><h5>{{course.title}}</h5><center>
+                </div>
+                </div>
+                <center><a href="/courses/{{course.slug}}" class="btn btn-info">&nbsp;&nbsp;More Info&nbsp;&nbsp;</a></center>
+                </div>
+           {% endfor  %}
 <!--
 <h3>There are {{ data.comments_count }} comment{{ data.comments_count|pluralize }}</h3>
 {% comments_for data %}
 -->
     </div>
+    
  {% endblock %}
